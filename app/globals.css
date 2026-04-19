@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --paper: #f7f1e3;
+  --paper-dark: #ede4cd;
+  --ink: #2d2419;
+  --ink-soft: #5a4a35;
+  --ink-faint: #8a7557;
+  --ocean: #2e6b8a;
+  --ocean-deep: #1d4a63;
+  --coral: #d96850;
+  --coral-soft: #e89478;
+  --sun: #e8b04a;
+  --leaf: #6b8e4e;
+  --rule: #c9b890;
+  --tape: #f5d573cc;
+  --card-bg: #fffaec;
+  --shadow-soft: 0 1px 2px rgba(60, 40, 10, 0.06), 0 8px 24px rgba(60, 40, 10, 0.08);
+  --shadow-lift: 0 2px 4px rgba(60, 40, 10, 0.08), 0 18px 40px rgba(60, 40, 10, 0.14);
+  --font-serif: "Noto Serif TC", "Shippori Mincho", "Songti TC", serif;
+  --font-hand: "Caveat", "Kalam", "Noto Serif TC", cursive;
+  --density-gap: 28px;
+  --density-pad: 22px;
+}
+
+html[data-theme="night"] {
+  --paper: #1a1713;
+  --paper-dark: #221d16;
+  --ink: #f0e6d2;
+  --ink-soft: #c8b99a;
+  --ink-faint: #8a7557;
+  --ocean: #6fb3d8;
+  --ocean-deep: #4a90b5;
+  --coral: #f08b72;
+  --coral-soft: #e89478;
+  --sun: #f0c878;
+  --leaf: #9ab878;
+  --rule: #3d3527;
+  --tape: #d4a84088;
+  --card-bg: #26201a;
+  --shadow-soft: 0 1px 2px rgba(0, 0, 0, 0.3), 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-lift: 0 2px 4px rgba(0, 0, 0, 0.35), 0 18px 40px rgba(0, 0, 0, 0.45);
+}
+
+html[data-density="loose"] { --density-gap: 44px; --density-pad: 30px; }
+html[data-density="tight"] { --density-gap: 16px; --density-pad: 14px; }
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: var(--font-serif);
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(217, 104, 80, 0.04), transparent 40%),
+    radial-gradient(circle at 80% 70%, rgba(46, 107, 138, 0.05), transparent 45%);
+}
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' seed='4'/><feColorMatrix values='0 0 0 0 0.55  0 0 0 0 0.45  0 0 0 0 0.3  0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mix-blend-mode: multiply;
+}
+html[data-theme="night"] body::before { mix-blend-mode: screen; opacity: 0.2; }
+
+.photo-ocean { background: linear-gradient(135deg, #3a8ab0, #1d4a63); }
+.photo-coral { background: linear-gradient(135deg, #e89478, #c04a30); }
+.photo-leaf { background: linear-gradient(135deg, #8eab6a, #5a7a3d); }
+.photo-sun { background: linear-gradient(135deg, #f0c878, #c88a2a); }
+.photo-sand { background: linear-gradient(135deg, #d4bb8a, #a68855); }
+.photo-sky { background: linear-gradient(135deg, #a8d4e0, #5a9ab5); }
+.photo-night { background: linear-gradient(135deg, #5a5a8a, #2a2a4a); }
+.photo-earth { background: linear-gradient(135deg, #8a6a48, #4a3020); }
+
+.photo-grain::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60'><filter id='g'><feTurbulence baseFrequency='0.8' numOctaves='2'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.12 0'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* Prose overrides for MDX-rendered description HTML inside spot cards */
+.spot-desc strong { color: var(--ink); }
+
+.detour-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.detour.open .detour-body { max-height: 2000px; }
+.detour.open .detour-caret { transform: rotate(90deg); }
+.detour-caret { transition: transform 240ms; }
+
+.day-section.collapsed .day-content { display: none; }

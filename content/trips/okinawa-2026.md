@@ -78,7 +78,7 @@ days:
         photo:
           label: 北谷町 · 美國村
           variant: ocean
-          src: /images/trips/okinawa-2026/美國村.jpg
+          src: /images/trips/okinawa-2026/門巴酒店.jpg
         desc: 入住 4 晚,公寓式房型,步行即可到美國村與 Araha Beach。
         chips:
           - { type: time, text: Check-in 15:00–21:30 }

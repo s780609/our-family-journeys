@@ -92,7 +92,10 @@ days:
         time: 下午 · 傍晚
         badge: 放鬆
         title: 美國村散步 + Araha Beach 玩沙
-        photo: { label: Araha Beach, variant: sand }
+        photo:
+          label: Araha Beach
+          variant: sand
+          src: /images/trips/okinawa-2026/美國村.jpg
         desc: 在美國村散步適應時差,到 Araha Beach 讓小孩玩沙放電,順便到超市採買尿布與奶粉。
         tips:
           - 傍晚 4-5 點最舒服,陽光不強

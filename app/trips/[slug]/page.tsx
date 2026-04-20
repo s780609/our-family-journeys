@@ -15,7 +15,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const trip = await getTrip(slug);
   if (!trip) return { title: "Trip not found" };
-  return { title: `${trip.title} · Our Family Journeys` };
+  const title = `${trip.title} · Our Family Journeys`;
+  const description =
+    trip.subtitle
+      ? `${trip.subtitle} · ${trip.dateRangeLabel} · ${trip.location}`
+      : `${trip.dateRangeLabel} · ${trip.location} · 家族旅行手帳`;
+  return {
+    title,
+    description,
+    openGraph: { title, description, type: "article" },
+    twitter: { card: "summary_large_image", title, description },
+  };
 }
 
 export default async function TripPage({ params }: { params: Promise<{ slug: string }> }) {

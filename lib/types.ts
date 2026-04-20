@@ -77,6 +77,8 @@ export interface Day {
   stops: Stop[];
 }
 
+export type TripMode = "planning" | "record";
+
 export interface TripFrontmatter {
   slug: string;
   title: string;
@@ -92,6 +94,13 @@ export interface TripFrontmatter {
   mapX?: number; // percent, for legacy hand-drawn map pin
   mapY?: number;
   coverVariant?: PhotoVariant;
+  /** Optional real cover photo path (relative to /public), used for hero & OG image */
+  coverPhoto?: string;
+  /**
+   * "planning" = 尚未出發,規劃模式;"record" = 已完成,紀錄模式。
+   * Omit to auto-infer from endDate vs. today.
+   */
+  mode?: TripMode;
   members?: string[];
   hotel?: { name: string; area: string; nights: number };
   transport?: { name: string; note: string };

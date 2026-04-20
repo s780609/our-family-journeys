@@ -3,9 +3,23 @@ import "./globals.css";
 import { PWAInit } from "@/components/PWAInit";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ||
+      (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
+  ),
   title: "Our Family Journeys · 家族旅行手帳",
   description: "家庭旅遊手帳 · 一次一次的家族旅行紀錄",
   manifest: "/manifest.json",
+  openGraph: {
+    title: "Our Family Journeys · 家族旅行手帳",
+    description: "家庭旅遊手帳 · 一次一次的家族旅行紀錄",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Family Journeys · 家族旅行手帳",
+    description: "家庭旅遊手帳 · 一次一次的家族旅行紀錄",
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: "default",

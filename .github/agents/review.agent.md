@@ -4,8 +4,8 @@
 # To make this agent available, merge this file into the default repository branch.
 # For format details, see: https://gh.io/customagents/config
 
-name:
-description:
+name: review
+description: 檢查是否可以編譯 至少要可以讓vercel可以通過
 ---
 
 # My Agent

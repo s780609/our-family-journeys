@@ -19,14 +19,20 @@ export function MobileNav({
   const [progress, setProgress] = useState(0);
   const [sheetOpen, setSheetOpen] = useState(false);
 
+  const getHeaderOffset = () => {
+    const el = document.getElementById("mobile-sticky-header");
+    return (el?.getBoundingClientRect().height ?? 150) + 8;
+  };
+
   useEffect(() => {
     const onScroll = () => {
       const sy = window.scrollY;
       const vh = window.innerHeight;
+      const offset = getHeaderOffset();
       let cur = 0;
       days.forEach((d, i) => {
         const el = document.getElementById(d.id);
-        if (el && el.offsetTop - 160 <= sy) cur = i;
+        if (el && el.offsetTop - offset - 4 <= sy) cur = i;
       });
       setActive(cur);
       const total = document.documentElement.scrollHeight - vh;
@@ -42,7 +48,10 @@ export function MobileNav({
     setSheetOpen(false);
     const el = document.getElementById(id);
     if (el) {
-      setTimeout(() => window.scrollTo({ top: el.offsetTop - 140, behavior: "smooth" }), 120);
+      setTimeout(() => {
+        const offset = getHeaderOffset();
+        window.scrollTo({ top: el.offsetTop - offset, behavior: "smooth" });
+      }, 120);
     }
   };
 
@@ -51,7 +60,10 @@ export function MobileNav({
   return (
     <>
       {/* Sticky mobile header — top bar + day strip */}
-      <div className="md:hidden sticky top-0 z-40 bg-[var(--paper)]/95 backdrop-blur border-b border-[var(--rule)]">
+      <div
+        id="mobile-sticky-header"
+        className="md:hidden sticky top-0 z-40 bg-[var(--paper)]/95 backdrop-blur border-b border-[var(--rule)]"
+      >
         {/* Top bar: back + title + switch home */}
         <div className="flex items-center justify-between gap-2.5 px-3 pt-2.5 pb-2">
           <a

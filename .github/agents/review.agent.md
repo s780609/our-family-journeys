@@ -6,6 +6,7 @@
 
 name: review
 description: 檢查是否可以編譯 至少要可以讓vercel可以通過
+model: gpt-5.4
 ---
 
 # My Agent

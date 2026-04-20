@@ -84,8 +84,21 @@ export function HomeMap({ trips }: { trips: Trip[] }) {
     if (!ref.current) return;
     let cancelled = false;
 
+    (window as any).gm_authFailure = () => {
+      console.error("[HomeMap] Google Maps auth failed — API key invalid, restricted by referrer, or billing not enabled");
+      if (!cancelled) setStatus("error");
+    };
+
+    const timeout = window.setTimeout(() => {
+      if (!cancelled && status === "loading") {
+        console.error("[HomeMap] Google Maps script load timed out after 15s");
+        setStatus("error");
+      }
+    }, 15000);
+
     loadMapsScript(apiKey)
       .then((g) => {
+        window.clearTimeout(timeout);
         if (cancelled || !ref.current) return;
         const map = new g.maps.Map(ref.current, {
           center: DEFAULT_CENTER,
@@ -159,9 +172,13 @@ export function HomeMap({ trips }: { trips: Trip[] }) {
 
         setStatus("ready");
       })
-      .catch(() => !cancelled && setStatus("error"));
+      .catch((err) => {
+        window.clearTimeout(timeout);
+        console.error("[HomeMap] Google Maps load failed:", err);
+        if (!cancelled) setStatus("error");
+      });
 
-    return () => { cancelled = true; };
+    return () => { cancelled = true; window.clearTimeout(timeout); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [apiKey, mappable.length]);
 

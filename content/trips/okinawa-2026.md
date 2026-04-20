@@ -249,7 +249,10 @@ days:
         badge: 主要景點
         badgeType: main
         title: 沖縄こどもの国
-        photo: { label: Kodomonokuni 兒童王國, variant: leaf }
+        photo:
+          label: Kodomonokuni 兒童王國
+          variant: leaf
+          src: /images/trips/okinawa-2026/兒童王國.jpg
         desc: 動物園 + 遊樂設施 + 科學體驗三合一。動線寬敞,推車非常友善,適合全家一整天慢慢玩。
         chips:
           - { type: price, text: "16歲以上 ¥1,000 · 15歲以下免費 (家族4大人 ¥4,000)" }

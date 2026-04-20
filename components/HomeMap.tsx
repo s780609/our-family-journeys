@@ -116,36 +116,30 @@ export function HomeMap({ trips }: { trips: Trip[] }) {
         const info = new g.maps.InfoWindow({ pixelOffset: new g.maps.Size(0, -12) });
 
         mappable.forEach((t) => {
-          const pinDiv = document.createElement("div");
-          pinDiv.style.cursor = "pointer";
-          pinDiv.style.transform = "translateY(0)";
-          pinDiv.style.transition = "transform 200ms";
-          pinDiv.innerHTML = pinSvg(false);
-          pinDiv.addEventListener("mouseenter", () => { pinDiv.innerHTML = pinSvg(true); pinDiv.style.transform = "translateY(-3px)"; });
-          pinDiv.addEventListener("mouseleave", () => { pinDiv.innerHTML = pinSvg(false); pinDiv.style.transform = "translateY(0)"; });
-
-          // Prefer Advanced Marker if available
-          const AdvancedMarker = (g.maps as any).marker?.AdvancedMarkerElement;
-          let marker: any;
-          if (AdvancedMarker) {
-            marker = new AdvancedMarker({
-              map,
-              position: { lat: t.lat!, lng: t.lng! },
-              content: pinDiv,
-              title: t.title,
+          const marker = new g.maps.Marker({
+            map,
+            position: { lat: t.lat!, lng: t.lng! },
+            title: t.title,
+            icon: {
+              url: "data:image/svg+xml;utf8," + encodeURIComponent(pinSvg(false)),
+              scaledSize: new g.maps.Size(36, 44),
+              anchor: new g.maps.Point(18, 44),
+            },
+          });
+          marker.addListener("mouseover", () => {
+            marker.setIcon({
+              url: "data:image/svg+xml;utf8," + encodeURIComponent(pinSvg(true)),
+              scaledSize: new g.maps.Size(44, 54),
+              anchor: new g.maps.Point(22, 54),
             });
-          } else {
-            marker = new g.maps.Marker({
-              map,
-              position: { lat: t.lat!, lng: t.lng! },
-              title: t.title,
-              icon: {
-                url: "data:image/svg+xml;utf8," + encodeURIComponent(pinSvg(false)),
-                scaledSize: new g.maps.Size(36, 44),
-                anchor: new g.maps.Point(18, 44),
-              },
+          });
+          marker.addListener("mouseout", () => {
+            marker.setIcon({
+              url: "data:image/svg+xml;utf8," + encodeURIComponent(pinSvg(false)),
+              scaledSize: new g.maps.Size(36, 44),
+              anchor: new g.maps.Point(18, 44),
             });
-          }
+          });
 
           const html = `
             <div style="font-family:'Noto Serif TC',serif;min-width:220px;max-width:260px;padding:4px 2px 2px;">
@@ -163,10 +157,9 @@ export function HomeMap({ trips }: { trips: Trip[] }) {
               </a>
             </div>`;
 
-          marker.addListener?.("click", () => {
+          marker.addListener("click", () => {
             info.setContent(html);
-            info.setPosition({ lat: t.lat!, lng: t.lng! });
-            info.open({ map, anchor: AdvancedMarker ? marker : marker });
+            info.open({ map, anchor: marker });
           });
         });
 

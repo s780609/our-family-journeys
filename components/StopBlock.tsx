@@ -307,6 +307,7 @@ function SpotPhoto({ photo, title }: { photo?: PhotoRef; title: string }) {
           fill
           sizes="(max-width: 768px) 100vw, 200px"
           className="object-cover"
+          unoptimized
         />
       </div>
     );

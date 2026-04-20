@@ -4,7 +4,7 @@ import Link from "next/link";
 import type { Trip } from "@/lib/types";
 
 const LIB_SRC = (key: string) =>
-  `https://maps.googleapis.com/maps/api/js?key=${key}&v=weekly&loading=async&libraries=marker`;
+  `https://maps.googleapis.com/maps/api/js?key=${key}&v=weekly&libraries=marker`;
 
 // East Asia view
 const DEFAULT_CENTER = { lat: 28, lng: 125 };

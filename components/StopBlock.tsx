@@ -1,4 +1,5 @@
-import type { Stop, MealOption, DetourItem, Chip, LinkItem } from "@/lib/types";
+import Image from "next/image";
+import type { Stop, MealOption, DetourItem, Chip, LinkItem, PhotoRef } from "@/lib/types";
 
 const MapIcon = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-3.5 h-3.5">
@@ -185,14 +186,7 @@ function renderStop(stop: Stop) {
       <StopTime>{s.time}</StopTime>
       <Card>
         <div className="grid grid-cols-[200px_1fr] gap-5 max-md:grid-cols-1">
-          <div
-            className={`photo-${s.photo?.variant ?? "ocean"} photo-grain aspect-[4/3] rounded-md relative overflow-hidden flex items-center justify-center text-center p-4 font-serif font-bold text-white text-[18px] leading-snug [text-shadow:0_1px_3px_rgba(0,0,0,0.3)] max-md:aspect-video`}
-          >
-            <span className="absolute top-2 right-2 font-[family-name:var(--font-hand)] text-sm px-2 py-0.5 bg-white/90 text-[var(--ink)] rounded-xl [text-shadow:none] z-[1]">
-              📷 佔位
-            </span>
-            <span className="relative z-[1]">{s.photo?.label ?? s.title}</span>
-          </div>
+          <SpotPhoto photo={s.photo} title={s.title} />
           <div className="min-w-0">
             {s.badge && <Badge badge={s.badge} type={s.badgeType} />}
             <h4 className="font-serif font-bold text-[22px] text-[var(--ink)] leading-snug mb-2 mt-1">
@@ -299,5 +293,32 @@ function DetourBlock({ title, hint, items, tip }: { title: string; hint?: string
         )}
       </div>
     </details>
+  );
+}
+
+function SpotPhoto({ photo, title }: { photo?: PhotoRef; title: string }) {
+  const src = photo?.src ? encodeURI(photo.src) : undefined;
+  if (src) {
+    return (
+      <div className="aspect-[4/3] rounded-md relative overflow-hidden max-md:aspect-video bg-[var(--paper-dark)]">
+        <Image
+          src={src}
+          alt={photo?.label ?? title}
+          fill
+          sizes="(max-width: 768px) 100vw, 200px"
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+  return (
+    <div
+      className={`photo-${photo?.variant ?? "ocean"} photo-grain aspect-[4/3] rounded-md relative overflow-hidden flex items-center justify-center text-center p-4 font-serif font-bold text-white text-[18px] leading-snug [text-shadow:0_1px_3px_rgba(0,0,0,0.3)] max-md:aspect-video`}
+    >
+      <span className="absolute top-2 right-2 font-[family-name:var(--font-hand)] text-sm px-2 py-0.5 bg-white/90 text-[var(--ink)] rounded-xl [text-shadow:none] z-[1]">
+        📷 佔位
+      </span>
+      <span className="relative z-[1]">{photo?.label ?? title}</span>
+    </div>
   );
 }

@@ -47,7 +47,10 @@ days:
         badge: 移動
         badgeType: move
         title: 搭計程車前往 COLDIO 租車店
-        photo: { label: 那霸機場 · 計程車站, variant: sky }
+        photo:
+          label: 那霸機場 · 計程車站
+          variant: sky
+          src: /images/trips/okinawa-2026/那霸空港.jpg
         desc: 從那霸機場搭計程車到 COLDIO 租車店,車程約 15-20 分鐘。Alphard 已預訂,含 2 張兒童安全座椅。
         chips:
           - { type: price, text: 計程車 ¥1,500–2,000 }
@@ -59,7 +62,10 @@ days:
         badge: 取車
         badgeType: main
         title: COLDIO 租車 · Alphard 40 系
-        photo: { label: COLDIO 那霸機場店, variant: earth }
+        photo:
+          label: COLDIO 那霸機場店
+          variant: earth
+          src: /images/trips/okinawa-2026/COLDIO租車店.jpg
         desc: 辦理取車手續,確認兒童椅安裝、保險與 NOC 賠償。現場付款 <strong>¥53,950</strong>。
         chips:
           - { type: price, text: 租車 ¥53,950 }
@@ -69,7 +75,10 @@ days:
         badge: Check-in
         badgeType: main
         title: 門巴公寓酒店 Monba Apartment Hotel
-        photo: { label: 北谷町 · 美國村, variant: ocean }
+        photo:
+          label: 北谷町 · 美國村
+          variant: ocean
+          src: /images/trips/okinawa-2026/美國村.jpg
         desc: 入住 4 晚,公寓式房型,步行即可到美國村與 Araha Beach。
         chips:
           - { type: time, text: Check-in 15:00–21:30 }
@@ -128,7 +137,10 @@ days:
         badge: 主要景點
         badgeType: main
         title: 沖繩世界 おきなわワールド
-        photo: { label: 玉泉洞 · 鐘乳石洞, variant: earth }
+        photo:
+          label: 玉泉洞 · 鐘乳石洞
+          variant: earth
+          src: /images/trips/okinawa-2026/沖繩世界.jpg
         desc: "<strong>玉泉洞</strong>:日本第二大鐘乳石洞,開放約 850 公尺,壯觀景觀,內部涼爽約 20-22°C,有階梯。<br><strong>琉球王國村</strong>:古民家散步、EISA 太鼓表演、工藝體驗(吹玻璃、畫風獅)。"
         chips:
           - { type: price, text: 大人 ¥2,000 · 小人 ¥1,000 · 3 歲以下免費 }
@@ -268,7 +280,10 @@ days:
         time: 上午
         badge: 放鬆
         title: 美國村購物 + Araha Beach 玩沙
-        photo: { label: American Village, variant: coral }
+        photo:
+          label: American Village
+          variant: coral
+          src: /images/trips/okinawa-2026/美國村.jpg
         desc: 最後採買伴手禮、讓小孩在沙灘再玩一次。
       - type: meal
         time: 13:00 – 14:00
@@ -284,7 +299,10 @@ days:
         badge: 還車
         badgeType: main
         title: COLDIO 那霸機場店還車
-        photo: { label: COLDIO 那霸機場店, variant: earth }
+        photo:
+          label: COLDIO 那霸機場店
+          variant: earth
+          src: /images/trips/okinawa-2026/COLDIO租車店.jpg
         desc: 還車後直接走到那霸機場航廈辦理登機。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Naha+Airport", text: 那霸機場 }

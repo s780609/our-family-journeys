@@ -249,7 +249,6 @@ function MealOption({ option }: { option: MealOption }) {
           href={option.url}
           target="_blank"
           rel="noopener"
-          onClick={(e) => e.stopPropagation()}
           className="inline-block mt-1.5 text-xs text-[var(--ocean)] no-underline hover:underline"
         >
           Google Maps ↗

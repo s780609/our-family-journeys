@@ -3,18 +3,18 @@ import Link from "next/link";
 
 export function TripHero({ trip }: { trip: TripFrontmatter }) {
   return (
-    <header className="relative max-w-[1400px] mx-auto px-8 md:px-16 lg:px-[72px] pt-10 md:pt-16 pb-8 md:pb-12 z-[2]">
-      {/* washi tape */}
+    <header className="relative max-w-[1400px] mx-auto px-8 md:px-16 lg:px-[72px] pt-6 md:pt-16 pb-8 md:pb-12 z-[2]">
+      {/* washi tape — desktop only */}
       <div
-        className="absolute top-[30px] left-[40px] w-[120px] h-7 opacity-85 shadow-[0_1px_3px_rgba(0,0,0,0.08)] -rotate-[8deg]"
+        className="hidden md:block absolute top-[30px] left-[40px] w-[120px] h-7 opacity-85 shadow-[0_1px_3px_rgba(0,0,0,0.08)] -rotate-[8deg]"
         style={{ background: "#90c4d6cc" }}
       />
       <div
-        className="absolute top-[50px] right-[80px] w-[120px] h-7 opacity-85 shadow-[0_1px_3px_rgba(0,0,0,0.08)] rotate-[12deg]"
+        className="hidden md:block absolute top-[50px] right-[80px] w-[120px] h-7 opacity-85 shadow-[0_1px_3px_rgba(0,0,0,0.08)] rotate-[12deg]"
         style={{ background: "#e8a57acc" }}
       />
 
-      <div className="flex justify-between mb-6">
+      <div className="hidden md:flex justify-between mb-6">
         <Link
           href="/"
           className="font-[family-name:var(--font-hand)] text-[var(--ink-faint)] hover:text-[var(--coral)] text-lg transition-colors no-underline"

@@ -4,7 +4,17 @@ import { haptic } from "@/lib/mobile";
 
 export type DayMeta = { id: string; label: string; date: string; title: string };
 
-export function MobileNav({ days, tripTitle }: { days: DayMeta[]; tripTitle: string }) {
+export function MobileNav({
+  days,
+  tripTitle,
+  location,
+  dateRangeLabel,
+}: {
+  days: DayMeta[];
+  tripTitle: string;
+  location: string;
+  dateRangeLabel: string;
+}) {
   const [active, setActive] = useState(0);
   const [progress, setProgress] = useState(0);
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -32,34 +42,88 @@ export function MobileNav({ days, tripTitle }: { days: DayMeta[]; tripTitle: str
     setSheetOpen(false);
     const el = document.getElementById(id);
     if (el) {
-      setTimeout(() => window.scrollTo({ top: el.offsetTop - 90, behavior: "smooth" }), 120);
+      setTimeout(() => window.scrollTo({ top: el.offsetTop - 140, behavior: "smooth" }), 120);
     }
   };
 
+  const locationShort = location.split(/\s+/)[0];
+
   return (
     <>
-      {/* Day pill strip — sticky under the header, mobile only */}
-      <div className="md:hidden sticky top-0 z-40 bg-[var(--paper)]/90 backdrop-blur border-b border-[var(--rule)]">
-        <div className="flex gap-2 overflow-x-auto px-3 py-2 snap-x snap-mandatory scrollbar-hide">
-          {days.map((d, i) => (
-            <button
-              key={d.id}
-              onClick={() => {
-                haptic();
-                jump(d.id);
-              }}
-              className={`flex-none snap-center min-w-[96px] px-3.5 py-2.5 rounded-2xl border transition ${
-                i === active
-                  ? "bg-[var(--ocean)] border-[var(--ocean)] text-white"
-                  : "bg-[var(--card-bg)] border-[var(--rule)] text-[var(--ink)]"
-              }`}
-            >
-              <div className="font-[family-name:var(--font-hand)] text-lg leading-none">{d.label}</div>
-              <div className="text-xs font-bold mt-0.5 opacity-80">{d.date}</div>
-              <div className="text-[11px] mt-0.5 opacity-70 truncate max-w-[140px]">{d.title}</div>
-            </button>
-          ))}
+      {/* Sticky mobile header — top bar + day strip */}
+      <div className="md:hidden sticky top-0 z-40 bg-[var(--paper)]/95 backdrop-blur border-b border-[var(--rule)]">
+        {/* Top bar: back + title + switch home */}
+        <div className="flex items-center justify-between gap-2.5 px-3 pt-2.5 pb-2">
+          <a
+            href="/"
+            onClick={() => haptic()}
+            className="flex items-center gap-2.5 min-w-0 flex-1 no-underline"
+          >
+            <span className="flex-none w-9 h-9 rounded-full border border-[var(--rule)] bg-[var(--card-bg)] flex items-center justify-center text-[var(--ink)]">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-4 h-4">
+                <path d="M15 18l-6-6 6-6" />
+              </svg>
+            </span>
+            <span className="min-w-0 flex flex-col">
+              <span className="text-[11px] text-[var(--ink-faint)] leading-tight truncate">
+                {locationShort} · {dateRangeLabel}
+              </span>
+              <span className="font-serif font-bold text-[15px] text-[var(--ink)] leading-tight truncate">
+                {tripTitle}
+              </span>
+            </span>
+          </a>
+          <a
+            href="/"
+            onClick={() => haptic()}
+            className="flex-none px-3.5 h-9 rounded-full bg-[var(--ocean)] text-white text-xs font-bold flex items-center no-underline"
+          >
+            切換到首頁
+          </a>
         </div>
+
+        {/* Day cards strip */}
+        <div className="flex gap-2 overflow-x-auto px-3 pb-2.5 snap-x snap-mandatory scrollbar-hide">
+          {days.map((d, i) => {
+            const isActive = i === active;
+            return (
+              <button
+                key={d.id}
+                onClick={() => {
+                  haptic();
+                  jump(d.id);
+                }}
+                className={`flex-none snap-center w-[88px] h-[90px] rounded-2xl border flex flex-col justify-between p-2.5 transition shadow-sm ${
+                  isActive
+                    ? "bg-[var(--ocean)] border-[var(--ocean)] text-white"
+                    : "bg-white border-[var(--rule)] text-[var(--ink)]"
+                }`}
+              >
+                <div
+                  className={`font-[family-name:var(--font-hand)] text-[22px] leading-none text-left ${
+                    isActive ? "text-white" : "text-[var(--ocean)]"
+                  }`}
+                >
+                  {d.label}
+                </div>
+                <div className="text-left">
+                  <div className={`text-[13px] font-bold leading-tight ${isActive ? "text-white" : "text-[var(--ink)]"}`}>
+                    {d.date}
+                  </div>
+                  <div
+                    className={`text-[10px] leading-tight mt-0.5 truncate ${
+                      isActive ? "text-white/85" : "text-[var(--ink-faint)]"
+                    }`}
+                  >
+                    {d.title}
+                  </div>
+                </div>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* progress */}
         <div className="h-[3px] bg-[var(--rule)] overflow-hidden">
           <div
             className="h-full bg-gradient-to-r from-[var(--coral)] to-[var(--sun)] transition-[width] duration-200"
@@ -102,11 +166,11 @@ export function MobileNav({ days, tripTitle }: { days: DayMeta[]; tripTitle: str
             const nav: any = navigator;
             if (nav.share) {
               try {
-                await nav.share({ title: tripTitle, url: location.href });
+                await nav.share({ title: tripTitle, url: window.location.href });
               } catch {}
             } else {
               try {
-                await navigator.clipboard.writeText(location.href);
+                await navigator.clipboard.writeText(window.location.href);
                 alert("連結已複製");
               } catch {}
             }

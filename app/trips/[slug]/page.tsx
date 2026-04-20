@@ -33,7 +33,12 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
 
   return (
     <>
-      <MobileNav days={mobileDays} tripTitle={trip.title} />
+      <MobileNav
+        days={mobileDays}
+        tripTitle={trip.title}
+        location={trip.location}
+        dateRangeLabel={trip.dateRangeLabel}
+      />
       <TripHero trip={trip} />
       <main className="max-w-[1400px] mx-auto px-6 md:px-[72px] pb-32 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-14 relative z-[2]">
         <ScrollProgress days={railDays} />

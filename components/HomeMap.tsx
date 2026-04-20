@@ -90,7 +90,7 @@ export function HomeMap({ trips }: { trips: Trip[] }) {
     };
 
     const timeout = window.setTimeout(() => {
-      if (!cancelled && status === "loading") {
+      if (!cancelled) {
         console.error("[HomeMap] Google Maps script load timed out after 15s");
         setStatus("error");
       }

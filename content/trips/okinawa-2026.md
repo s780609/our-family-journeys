@@ -277,7 +277,10 @@ days:
         badge: 退房
         badgeType: main
         title: 門巴公寓酒店退房
-        photo: { label: Monba Apartment Hotel, variant: ocean }
+        photo:
+          label: Monba Apartment Hotel
+          variant: ocean
+          src: /images/trips/okinawa-2026/門巴酒店.jpg
         desc: 退房後行李可暫放酒店,把握最後的美國村時光。
       - type: spot
         time: 上午

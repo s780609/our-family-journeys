@@ -14,18 +14,13 @@ export function TripHero({ trip }: { trip: TripFrontmatter }) {
         style={{ background: "#e8a57acc" }}
       />
 
-      <div className="hidden md:flex justify-between mb-6">
+      <div className="flex justify-between mb-6">
         <Link
           href="/"
           className="font-[family-name:var(--font-hand)] text-[var(--ink-faint)] hover:text-[var(--coral)] text-lg transition-colors no-underline"
         >
           ← 回首頁
         </Link>
-      </div>
-
-      {/* Season badge */}
-      <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full border border-[var(--rule)] bg-white/40 font-serif text-[13px] text-[var(--ink-soft)] mb-5">
-        {trip.location.split(/\s+/)[0]} · {trip.year} {seasonFromDate(trip.startDate)}
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] items-end gap-10 relative">
@@ -104,12 +99,4 @@ function daysBetween(a: string, b: string) {
   const d1 = new Date(a);
   const d2 = new Date(b);
   return Math.round((d2.getTime() - d1.getTime()) / 86400000);
-}
-
-function seasonFromDate(d: string) {
-  const m = new Date(d).getMonth() + 1;
-  if (m >= 3 && m <= 5) return "春";
-  if (m >= 6 && m <= 8) return "夏";
-  if (m >= 9 && m <= 11) return "秋";
-  return "冬";
 }

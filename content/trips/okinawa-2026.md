@@ -125,7 +125,6 @@ days:
         badge: 主要景點
         badgeType: main
         title: 沖繩世界 おきなわワールド
-        image: /images/trips/okinawa-2026/沖繩世界.jpg
         photo: { label: 玉泉洞 · 鐘乳石洞, variant: earth }
         desc: "<strong>玉泉洞</strong>:日本第二大鐘乳石洞,開放約 850 公尺,壯觀景觀,內部涼爽約 20-22°C,有階梯。<br><strong>琉球王國村</strong>:古民家散步、EISA 太鼓表演、工藝體驗(吹玻璃、畫風獅)。"
         chips:

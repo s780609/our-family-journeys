@@ -100,5 +100,3 @@ html[data-theme="night"] body::before { mix-blend-mode: screen; opacity: 0.2; }
 .detour.open .detour-body { max-height: 2000px; }
 .detour.open .detour-caret { transform: rotate(90deg); }
 .detour-caret { transition: transform 240ms; }
-
-.day-section.collapsed .day-content { display: none; }

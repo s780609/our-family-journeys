@@ -48,7 +48,6 @@ export type Stop =
       badgeType?: "main" | "move" | "meal";
       title: string;
       photo?: PhotoRef;
-      image?: string;
       desc?: string;
       chips?: Chip[];
       links?: LinkItem[];
@@ -88,7 +87,9 @@ export interface TripFrontmatter {
   dateRangeLabel: string;
   location: string;
   locationEn?: string;
-  mapX?: number; // percent, for homepage hand-drawn map pin
+  lat?: number; // Google Maps pin latitude
+  lng?: number; // Google Maps pin longitude
+  mapX?: number; // percent, for legacy hand-drawn map pin
   mapY?: number;
   coverVariant?: PhotoVariant;
   members?: string[];

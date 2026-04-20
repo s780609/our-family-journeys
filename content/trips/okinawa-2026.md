@@ -53,7 +53,7 @@ days:
           src: /images/trips/okinawa-2026/那霸空港.jpg
         desc: 從那霸機場搭計程車到 COLDIO 租車店,車程約 15-20 分鐘。Alphard 已預訂,含 2 張兒童安全座椅。
         chips:
-          - { type: price, text: 計程車 ¥4,000–5,600 }
+          - { type: price, text: "計程車 ¥4,000–5,600" }
           - { type: time, text: 車程 15–20 分 }
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=沖縄県豊見城市翁長849-10", text: COLDIO 那霸機場店 }
@@ -68,7 +68,7 @@ days:
           src: /images/trips/okinawa-2026/COLDIO租車店.jpg
         desc: 辦理取車手續,確認兒童椅安裝、保險與 NOC 賠償。現場付款 <strong>¥53,950</strong>。
         chips:
-          - { type: price, text: 租車 ¥53,950 }
+          - { type: price, text: "租車 ¥53,950" }
           - { type: time, text: 取車 14:00 · 還車 5/3 16:00 }
       - type: spot
         time: 14:30 – 15:00
@@ -146,7 +146,7 @@ days:
           src: /images/trips/okinawa-2026/沖繩世界.jpg
         desc: "<strong>玉泉洞</strong>:日本第二大鐘乳石洞,開放約 850 公尺,壯觀景觀,內部涼爽約 20-22°C,有階梯。<br><strong>琉球王國村</strong>:古民家散步、EISA 太鼓表演、工藝體驗(吹玻璃、畫風獅)。"
         chips:
-          - { type: price, text: 大人 ¥2,000 · 兒童(4-14歲) ¥1,000 · 3歲以下免費 (家族約 ¥9,000) }
+          - { type: price, text: "大人 ¥2,000 · 兒童(4-14歲) ¥1,000 · 3歲以下免費 (家族約 ¥9,000)" }
           - { type: time, text: 9:00–17:30(最終入場 16:00) }
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=おきなわワールド+沖縄県南城市玉城前川1336", text: Google Maps }
@@ -188,7 +188,7 @@ days:
           src: /images/trips/okinawa-2026/DMM水族館.jpg
         desc: "室內互動水族館。可摸樹懶、餵企鵝、室內表演,<strong>推車與長輩都友善</strong>。"
         chips:
-          - { type: price, text: 大人 ¥2,400–2,800 · 4-12歲 ¥1,500–1,700 · 3歲以下免費 (家族4大人約 ¥9,600–11,200) }
+          - { type: price, text: "大人 ¥2,400–2,800 · 4-12歲 ¥1,500–1,700 · 3歲以下免費 (家族4大人約 ¥9,600–11,200)" }
         links:
           - { type: map, url: "https://maps.app.goo.gl/5MsoMaA6T3vuScENA", text: Google Maps }
         tips:
@@ -252,7 +252,7 @@ days:
         photo: { label: Kodomonokuni 兒童王國, variant: leaf }
         desc: 動物園 + 遊樂設施 + 科學體驗三合一。動線寬敞,推車非常友善,適合全家一整天慢慢玩。
         chips:
-          - { type: price, text: 16歲以上 ¥1,000 · 15歲以下免費 (家族4大人 ¥4,000) }
+          - { type: price, text: "16歲以上 ¥1,000 · 15歲以下免費 (家族4大人 ¥4,000)" }
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=沖縄こどもの国+沖縄市胡屋5丁目7-1", text: Google Maps }
         tips:

@@ -8,7 +8,10 @@ endDate: 2026-05-03
 dateRangeLabel: 4/29 – 5/3
 location: 沖繩 Okinawa
 locationEn: Okinawa, Japan
-# 地圖座標(用於首頁手繪地圖)
+# Google Maps 圖釘座標(首頁互動地圖)
+lat: 26.3344
+lng: 127.8056
+# 舊版手繪地圖座標(保留作為 fallback)
 mapX: 62
 mapY: 55
 coverVariant: ocean

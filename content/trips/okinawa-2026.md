@@ -16,9 +16,9 @@ mapX: 62
 mapY: 55
 coverVariant: ocean
 members:
-  - 長輩 × 2
-  - 夫妻
-  - 2 歲 + 1 歲
+  - 北投阿公阿嬤 × 2
+  - 我們夫妻倆
+  - 2 歲的欣予 + 1 歲的秧予
 hotel:
   name: 門巴公寓酒店 Monba Apartment Hotel
   area: 北谷町 · 美國村 Mihama 8-12

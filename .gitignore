@@ -5,3 +5,10 @@ out
 .vercel
 *.log
 .DS_Store
+
+# Claude Code：只保留共享設定，忽略憑證/session/cache 等本機執行時檔案
+.claude/*
+!.claude/CLAUDE.md
+!.claude/settings.json
+!.claude/agents/
+!.claude/commands/

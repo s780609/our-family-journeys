@@ -53,7 +53,7 @@ days:
           src: /images/trips/okinawa-2026/那霸空港.jpg
         desc: 從那霸機場搭計程車到 COLDIO 租車店,車程約 15-20 分鐘。Alphard 已預訂,含 2 張兒童安全座椅。
         chips:
-          - { type: price, text: 計程車 ¥1,500–2,000 }
+          - { type: price, text: "計程車 ¥4,000–5,600" }
           - { type: time, text: 車程 15–20 分 }
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=沖縄県豊見城市翁長849-10", text: COLDIO 那霸機場店 }
@@ -68,7 +68,7 @@ days:
           src: /images/trips/okinawa-2026/COLDIO租車店.jpg
         desc: 辦理取車手續,確認兒童椅安裝、保險與 NOC 賠償。現場付款 <strong>¥53,950</strong>。
         chips:
-          - { type: price, text: 租車 ¥53,950 }
+          - { type: price, text: "租車 ¥53,950" }
           - { type: time, text: 取車 14:00 · 還車 5/3 16:00 }
       - type: spot
         time: 14:30 – 15:00
@@ -146,7 +146,7 @@ days:
           src: /images/trips/okinawa-2026/沖繩世界.jpg
         desc: "<strong>玉泉洞</strong>:日本第二大鐘乳石洞,開放約 850 公尺,壯觀景觀,內部涼爽約 20-22°C,有階梯。<br><strong>琉球王國村</strong>:古民家散步、EISA 太鼓表演、工藝體驗(吹玻璃、畫風獅)。"
         chips:
-          - { type: price, text: 大人 ¥2,000 · 小人 ¥1,000 · 3 歲以下免費 }
+          - { type: price, text: "大人 ¥2,000 · 兒童(4-14歲) ¥1,000 · 3歲以下免費 (家族約 ¥9,000)" }
           - { type: time, text: 9:00–17:30(最終入場 16:00) }
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=おきなわワールド+沖縄県南城市玉城前川1336", text: Google Maps }
@@ -182,8 +182,13 @@ days:
         badge: 主要景點
         badgeType: main
         title: DMM Kariyushi 水族館
-        photo: { label: DMM Kariyushi Aquarium, variant: ocean }
+        photo:
+          label: DMM Kariyushi Aquarium
+          variant: ocean
+          src: /images/trips/okinawa-2026/DMM水族館.jpg
         desc: "室內互動水族館。可摸樹懶、餵企鵝、室內表演,<strong>推車與長輩都友善</strong>。"
+        chips:
+          - { type: price, text: "大人 ¥2,400–2,800 · 4-12歲 ¥1,500–1,700 · 3歲以下免費 (家族4大人約 ¥9,600–11,200)" }
         links:
           - { type: map, url: "https://maps.app.goo.gl/5MsoMaA6T3vuScENA", text: Google Maps }
         tips:
@@ -193,7 +198,10 @@ days:
         time: 12:30 – 14:30
         badge: 午餐 + 逛街
         title: 沖繩 ASHIBINAA Outlet
-        photo: { label: Outlet Mall Ashibinaa, variant: sun }
+        photo:
+          label: Outlet Mall Ashibinaa
+          variant: sun
+          src: /images/trips/okinawa-2026/沖繩-ASHIBINAA-Outlet.jpg
         desc: 在美食街吃午餐,順便逛 Outlet。品牌多、價格親切。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Okinawa+Outlet+Mall+Ashibinaa+1-188+Toyosaki+Tomigusuku+Okinawa", text: Google Maps }
@@ -201,7 +209,10 @@ days:
         time: 14:40 – 17:30
         badge: 下午主行程
         title: San-A Urasoe West Coast PARCO CITY
-        photo: { label: PARCO CITY, variant: coral }
+        photo:
+          label: PARCO CITY
+          variant: coral
+          src: /images/trips/okinawa-2026/Parco-City.jpg
         desc: 沖繩最大購物中心之一。有大型兒童遊戲區、嬰兒室完善,適合全家逛。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=San-A+Urasoe+West+Coast+PARCO+CITY+3-1-1+Irijima+Urasoe+Okinawa", text: Google Maps }
@@ -238,8 +249,13 @@ days:
         badge: 主要景點
         badgeType: main
         title: 沖縄こどもの国
-        photo: { label: Kodomonokuni 兒童王國, variant: leaf }
+        photo:
+          label: Kodomonokuni 兒童王國
+          variant: leaf
+          src: /images/trips/okinawa-2026/兒童王國.jpg
         desc: 動物園 + 遊樂設施 + 科學體驗三合一。動線寬敞,推車非常友善,適合全家一整天慢慢玩。
+        chips:
+          - { type: price, text: "16歲以上 ¥1,000 · 15歲以下免費 (家族4大人 ¥4,000)" }
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=沖縄こどもの国+沖縄市胡屋5丁目7-1", text: Google Maps }
         tips:
@@ -256,7 +272,10 @@ days:
         time: 下午
         badge: 放鬆
         title: 返回美國村 · 沙灘或酒店休息
-        photo: { label: Araha Beach · 傍晚, variant: sky }
+        photo:
+          label: Araha Beach · 傍晚
+          variant: sky
+          src: /images/trips/okinawa-2026/美國村.jpg
         desc: 若小孩還有體力,可再到 Araha Beach 看日落;若累了就回酒店休息。
       - type: meal
         time: 晚餐
@@ -322,3 +341,15 @@ days:
 # 沖繩自由行 2026
 
 這是家族第一次帶 1 歲與 2 歲小孩的沖繩自由行,搭配 2 位 65 歲長輩。全程以「輕鬆、彈性、推車友善」為原則規劃。
+
+**主要費用預估總覽 (2026年4-5月參考價，4大人+2嬰兒，不含機票與酒店):**
+
+- 租車 4 天（含兒童椅）：¥53,950
+- 機場到租車店計程車：¥4,000–5,600
+- 沖繩世界門票：約 ¥9,000
+- DMM Kariyushi 水族館：約 ¥9,600–11,200
+- 沖縄こどもの国：¥4,000
+- 油錢（Alphard 全程約400km）：約 ¥8,000–10,000
+- 餐飲（5天，以美國村/園區快餐為主）：每日 ¥10,000–15,000 × 5 ≈ ¥50,000–75,000
+- 酒店 4 晚（Monba Apartment Hotel，參考價）：約 ¥80,000–100,000
+- **總計粗估**：¥220,000–270,000 日圓（不含伴手禮、額外購物、機票）

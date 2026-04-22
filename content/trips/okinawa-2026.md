@@ -159,7 +159,7 @@ days:
     sub: 鐘乳石洞探險 + 琉球文化體驗
     stops:
       - type: move
-        time: 07:30 – 08:00
+        time: 09:00 – 09:30
         text: 從美國村酒店出發 → 沖繩世界(約 50–70 分鐘)
       - type: detour
         title: 途中推薦停靠點(買簡餐)
@@ -178,7 +178,7 @@ days:
             note: 園區內也有簡食區
         tip: 玉泉洞內禁止飲食,建議入口前或王國村用餐。帶水與小零食給小孩。
       - type: spot
-        time: 10:00 – 15:00
+        time: 10:30 – 15:00
         badge: 主要景點
         badgeType: main
         title: 沖繩世界 おきなわワールド
@@ -353,16 +353,16 @@ days:
           src: /images/trips/okinawa-2026/美國村.jpg
         desc: 最後採買伴手禮、讓小孩在沙灘再玩一次。
       - type: meal
-        time: 13:00 – 14:00
+        time: 12:00 – 13:00
         label: 午餐 · 美國村
         options:
           - { name: A&W, note: 最後一餐沖繩美式, url: "https://www.google.com/maps/search/?api=1&query=A%26W+2+Chome-5-5+Mihama+Chatan+Okinawa" }
           - { name: GORDIES, note: 手作漢堡, url: "https://www.google.com/maps/search/?api=1&query=GORDIES+American+Village+Chatan+Okinawa" }
       - type: move
-        time: "14:30"
+        time: "13:30"
         text: 開車前往那霸機場(約 40 分鐘)
       - type: spot
-        time: "16:00"
+        time: "14:30"
         badge: 還車
         badgeType: main
         title: COLDIO 那霸機場店還車
@@ -370,7 +370,7 @@ days:
           label: COLDIO 那霸機場店
           variant: earth
           src: /images/trips/okinawa-2026/COLDIO租車店.jpg
-        desc: 還車後直接走到那霸機場航廈辦理登機。
+        desc: 還車後直接搭計程車到那霸機場航廈辦理登機。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Naha+Airport", text: 那霸機場 }
       - type: move

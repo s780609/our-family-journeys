@@ -1,3 +1,5 @@
+import fs from "node:fs";
+import path from "node:path";
 import { notFound } from "next/navigation";
 import { getAllTripSlugs, getDefaultChecklist, getTrip } from "@/lib/trips";
 import { TripHero } from "@/components/TripHero";
@@ -22,11 +24,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     trip.subtitle
       ? `${trip.subtitle} · ${trip.dateRangeLabel} · ${trip.location}`
       : `${trip.dateRangeLabel} · ${trip.location} · 家族旅行手帳`;
+  const tripOg = `/og-${slug}.png`;
+  const hasTripOg = fs.existsSync(path.join(process.cwd(), "public", `og-${slug}.png`));
+  const ogImage = hasTripOg ? tripOg : "/og-image.png";
   return {
     title,
     description,
-    openGraph: { title, description, type: "article" },
-    twitter: { card: "summary_large_image", title, description },
+    openGraph: { title, description, type: "article", images: [ogImage] },
+    twitter: { card: "summary_large_image", title, description, images: [ogImage] },
   };
 }
 

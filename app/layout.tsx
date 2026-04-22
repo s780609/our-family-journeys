@@ -7,18 +7,21 @@ export const metadata: Metadata = {
     process.env.NEXT_PUBLIC_SITE_URL ||
       (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000")
   ),
-  title: "Our Family Journeys · 家族旅行手帳",
-  description: "家庭旅遊手帳 · 一次一次的家族旅行紀錄",
+  title: "家庭旅行手帳 · Our Family Journeys",
+  description: "把每一趟旅行、景點、記憶都收藏起來。",
   manifest: "/manifest.json",
   openGraph: {
-    title: "Our Family Journeys · 家族旅行手帳",
-    description: "家庭旅遊手帳 · 一次一次的家族旅行紀錄",
+    title: "家庭旅行手帳 · Our Family Journeys",
+    description: "把每一趟旅行、景點、記憶都收藏起來。",
     type: "website",
+    siteName: "Our Family Journeys",
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Our Family Journeys · 家族旅行手帳",
-    description: "家庭旅遊手帳 · 一次一次的家族旅行紀錄",
+    title: "家庭旅行手帳 · Our Family Journeys",
+    description: "把每一趟旅行、景點、記憶都收藏起來。",
+    images: ["/og-image.png"],
   },
   appleWebApp: {
     capable: true,
@@ -26,11 +29,8 @@ export const metadata: Metadata = {
     title: "家族旅行",
   },
   icons: {
-    icon: [
-      { url: "/icons/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icons/icon-512.png", sizes: "512x512", type: "image/png" },
-    ],
-    apple: "/apple-touch-icon.png",
+    icon: "/favicon-32.png",
+    apple: "/icon-512.png",
   },
 };
 

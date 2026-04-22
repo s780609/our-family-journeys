@@ -7,6 +7,7 @@ export type DayMeta = { id: string; label: string; date: string; title: string }
 export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: DayMeta[]; tripTitle: string; hasChecklist?: boolean }) {
   const [active, setActive] = useState(0);
   const [progress, setProgress] = useState(0);
+  const [dayPositions, setDayPositions] = useState<number[]>(() => days.map(() => 0));
   const [sheetOpen, setSheetOpen] = useState(false);
   const [fabOpen, setFabOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -17,22 +18,33 @@ export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: Day
     const onScroll = () => {
       const sy = window.scrollY;
       const vh = window.innerHeight;
+      const total = document.documentElement.scrollHeight - vh;
       let cur = 0;
+      const positions: number[] = [];
       days.forEach((d, i) => {
         const el = document.getElementById(d.id);
-        if (el && el.offsetTop - 180 <= sy) cur = i;
+        if (el) {
+          if (el.offsetTop - 180 <= sy) cur = i;
+          positions[i] = total > 0 ? Math.min(100, Math.max(0, (el.offsetTop / total) * 100)) : 0;
+        } else {
+          positions[i] = 0;
+        }
       });
       setActive(cur);
+      setDayPositions(positions);
       setScrolled(sy > 400);
-      const total = document.documentElement.scrollHeight - vh;
       setProgress(total > 0 ? Math.min(100, (sy / total) * 100) : 0);
       if (sy > 200 && sy > lastY) setHideTop(true);
       else setHideTop(false);
       setLastY(sy);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
     onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
   }, [days, lastY]);
 
   const jump = (id: string) => {
@@ -116,29 +128,39 @@ export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: Day
               {active + 1}/{days.length}
             </div>
           </div>
-          <div className="flex gap-1.5 overflow-x-auto px-3 pb-2 snap-x snap-mandatory scrollbar-hide">
-            {days.map((d, i) => (
-              <button
-                key={d.id}
-                onClick={() => jump(d.id)}
-                className={`flex-none snap-start px-3 py-1.5 rounded-full border text-sm transition ${
-                  i === active
-                    ? "bg-[var(--ocean)] border-[var(--ocean)] text-white shadow-sm"
-                    : "bg-[var(--card-bg)] border-[var(--rule)] text-[var(--ink)]"
-                }`}
-              >
-                <span className="font-[family-name:var(--font-hand)] text-base leading-none mr-1.5">
-                  {d.label}
-                </span>
-                <span className="text-[11px] font-bold opacity-80">{d.date}</span>
-              </button>
-            ))}
-          </div>
-          <div className="h-[2px] bg-[var(--rule)] overflow-hidden">
+          <div className="relative h-11 px-3">
+            {/* rail background */}
+            <div className="absolute left-3 right-3 top-1/2 -translate-y-1/2 h-[3px] rounded-full bg-[var(--paper-dark)]" />
+            {/* rail filled portion */}
             <div
-              className="h-full bg-gradient-to-r from-[var(--coral)] to-[var(--sun)] transition-[width] duration-200"
-              style={{ width: `${progress}%` }}
+              className="absolute left-3 top-1/2 -translate-y-1/2 h-[3px] rounded-full bg-gradient-to-r from-[var(--coral)] to-[var(--sun)] transition-[width] duration-200"
+              style={{ width: `calc((100% - 24px) * ${progress / 100})` }}
             />
+            {/* day dots */}
+            {days.map((d, i) => {
+              const p = dayPositions[i] ?? 0;
+              const curr = i === active;
+              const passed = i < active;
+              return (
+                <button
+                  key={d.id}
+                  onClick={() => jump(d.id)}
+                  aria-label={`跳到 ${d.label} · ${d.date}`}
+                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-11 flex items-center justify-center"
+                  style={{ left: `calc(12px + (100% - 24px) * ${p / 100})` }}
+                >
+                  <span
+                    className={`rounded-full transition-all ${
+                      curr
+                        ? "w-[14px] h-[14px] bg-[var(--coral)] shadow-[0_0_0_4px_rgba(217,104,80,0.25)]"
+                        : passed
+                        ? "w-3 h-3 bg-[var(--ocean)]"
+                        : "w-3 h-3 bg-[var(--paper)] border-2 border-[var(--rule)]"
+                    }`}
+                  />
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>

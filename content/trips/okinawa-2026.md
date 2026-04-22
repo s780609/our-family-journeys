@@ -39,6 +39,36 @@ checklist:
       - { id: ic, label: "Suica / OKICA 交通卡(國內線買不到,建議抵沖後補)" }
       - { id: offline, label: 下載離線地圖:那霸 · 中部 · 北部恩納 }
       - { id: eat-reservation, label: 燒肉五苑 · 海人食堂預約確認 }
+budget:
+  title: 主要費用預估總覽
+  note: "2026 年 4-5 月參考價 · 4 大人 + 2 嬰兒"
+  items:
+    - label: 機票
+      amount: "TWD 79,800"
+      note: 含稅
+    - label: 飯店 4 晚
+      amount: "¥117,450 + ¥105,300"
+    - label: 租車 4 天(含兒童椅)
+      amount: "¥53,950"
+    - label: 機場到租車店計程車
+      amount: "¥4,000–5,600"
+    - label: 沖繩世界門票
+      amount: "約 ¥9,000"
+    - label: DMM Kariyushi 水族館
+      amount: "約 ¥9,600–11,200"
+    - label: 沖縄こどもの国
+      amount: "¥4,000"
+    - label: 油錢(Alphard 全程約 400km)
+      amount: "約 ¥8,000–10,000"
+    - label: 餐飲 5 天(美國村/園區快餐為主)
+      amount: "¥50,000–75,000"
+      note: 每日約 ¥10,000–15,000
+    - label: 酒店 4 晚(Monba Apartment Hotel,參考價)
+      amount: "約 ¥80,000–100,000"
+  total:
+    label: 總計粗估
+    amount: "¥220,000–270,000"
+    note: 不含伴手禮、額外購物、機票
 days:
   - num: 1
     date: "4/29 (三)"
@@ -195,7 +225,7 @@ days:
         photo:
           label: DMM Kariyushi Aquarium
           variant: ocean
-          src: /images/trips/okinawa-2026/DMM水族館.jpg
+          src: https://farm66.static.flickr.com/65535/53467456271_31420517ce_o.jpg
         desc: "室內互動水族館。可摸樹懶、餵企鵝、室內表演,<strong>推車與長輩都友善</strong>。"
         chips:
           - { type: price, text: "大人 ¥2,400–2,800 · 4-12歲 ¥1,500–1,700 · 3歲以下免費 (家族4大人約 ¥9,600–11,200)" }
@@ -347,19 +377,3 @@ days:
       - type: note
         text: 平安到家 ✈️ 期待下一次的家庭旅行 ♡
 ---
-
-# 沖繩自由行 2026
-
-這是家族第一次帶 1 歲與 2 歲小孩的沖繩自由行,搭配 2 位 65 歲長輩。全程以「輕鬆、彈性、推車友善」為原則規劃。
-
-**主要費用預估總覽 (2026年4-5月參考價，4大人+2嬰兒，不含機票與酒店):**
-
-- 租車 4 天（含兒童椅）：¥53,950
-- 機場到租車店計程車：¥4,000–5,600
-- 沖繩世界門票：約 ¥9,000
-- DMM Kariyushi 水族館：約 ¥9,600–11,200
-- 沖縄こどもの国：¥4,000
-- 油錢（Alphard 全程約400km）：約 ¥8,000–10,000
-- 餐飲（5天，以美國村/園區快餐為主）：每日 ¥10,000–15,000 × 5 ≈ ¥50,000–75,000
-- 酒店 4 晚（Monba Apartment Hotel，參考價）：約 ¥80,000–100,000
-- **總計粗估**：¥220,000–270,000 日圓（不含伴手禮、額外購物、機票）

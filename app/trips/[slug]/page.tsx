@@ -6,6 +6,7 @@ import { ScrollProgress, BackTop, DayCollapseToggle } from "@/components/ScrollU
 import { TweaksPanel } from "@/components/TweaksPanel";
 import { MobileNav } from "@/components/MobileNav";
 import { Checklist } from "@/components/Checklist";
+import { TripBudget } from "@/components/TripBudget";
 
 export async function generateStaticParams() {
   const slugs = await getAllTripSlugs();
@@ -53,6 +54,7 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
           {trip.days.map((d) => (
             <DaySection key={d.num} day={d} />
           ))}
+          {trip.budget && <TripBudget budget={trip.budget} />}
           <div className="mt-20 p-10 rounded-2xl text-center text-white relative overflow-hidden shadow-[var(--shadow-lift)] bg-gradient-to-br from-[var(--ocean)] to-[var(--ocean-deep)]">
             <h3 className="font-serif font-bold text-3xl m-0 mb-2">平安的旅程 · 美好的回憶</h3>
             <p className="font-[family-name:var(--font-hand)] text-[22px] m-0 opacity-95">

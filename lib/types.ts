@@ -106,7 +106,21 @@ export interface TripFrontmatter {
   transport?: { name: string; note: string };
   flights?: { outbound: string; return: string };
   checklist?: { id: string; title: string; icon: string; items: { id: string; label: string; note?: string }[] }[];
+  budget?: Budget;
   days: Day[];
+}
+
+export interface BudgetItem {
+  label: string;
+  amount: string;
+  note?: string;
+}
+
+export interface Budget {
+  title?: string;
+  note?: string;
+  items: BudgetItem[];
+  total?: BudgetItem;
 }
 
 export interface Trip extends TripFrontmatter {

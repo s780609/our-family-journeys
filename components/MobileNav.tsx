@@ -40,7 +40,7 @@ export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: Day
     setSheetOpen(false);
     const el = document.getElementById(id);
     if (el) {
-      setTimeout(() => window.scrollTo({ top: el.offsetTop - 100, behavior: "smooth" }), 120);
+      setTimeout(() => window.scrollTo({ top: el.offsetTop, behavior: "smooth" }), 120);
     }
   };
 

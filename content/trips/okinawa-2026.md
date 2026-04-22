@@ -65,6 +65,8 @@ budget:
       note: 每日約 ¥10,000–15,000
     - label: 酒店 4 晚(Monba Apartment Hotel,參考價)
       amount: "約 ¥80,000–100,000"
+    - label: 匯率參考
+      amount: "台幣:日圓 = 1:5"
   total:
     label: 總計粗估
     amount: "¥220,000–270,000"

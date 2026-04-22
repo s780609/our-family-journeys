@@ -105,9 +105,22 @@ export interface TripFrontmatter {
   hotel?: { name: string; area: string; nights: number };
   transport?: { name: string; note: string };
   flights?: { outbound: string; return: string };
-  checklist?: { id: string; title: string; icon: string; items: { id: string; label: string; note?: string }[] }[];
+  checklist?: ChecklistCategory[];
   budget?: Budget;
   days: Day[];
+}
+
+export interface ChecklistItem {
+  id: string;
+  label: string;
+  note?: string;
+}
+
+export interface ChecklistCategory {
+  id: string;
+  title: string;
+  icon: string;
+  items: ChecklistItem[];
 }
 
 export interface BudgetItem {

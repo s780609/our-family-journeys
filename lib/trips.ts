@@ -3,10 +3,11 @@ import path from "node:path";
 import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
-import type { Trip, TripFrontmatter } from "./types";
+import type { ChecklistCategory, Trip, TripFrontmatter } from "./types";
 export { resolveTripMode } from "./trip-mode";
 
 const TRIPS_DIR = path.join(process.cwd(), "content", "trips");
+const CHECKLIST_DEFAULTS_PATH = path.join(process.cwd(), "content", "checklist-defaults.md");
 
 export async function getAllTripSlugs(): Promise<string[]> {
   if (!fs.existsSync(TRIPS_DIR)) return [];
@@ -33,6 +34,13 @@ export async function getAllTrips(): Promise<Trip[]> {
   return trips
     .filter((t): t is Trip => t !== null)
     .sort((a, b) => b.year - a.year || b.startDate.localeCompare(a.startDate));
+}
+
+export async function getDefaultChecklist(): Promise<ChecklistCategory[]> {
+  if (!fs.existsSync(CHECKLIST_DEFAULTS_PATH)) return [];
+  const raw = fs.readFileSync(CHECKLIST_DEFAULTS_PATH, "utf8");
+  const { data } = matter(raw);
+  return (data.categories ?? []) as ChecklistCategory[];
 }
 
 export async function getTripsByYear(): Promise<Map<number, Trip[]>> {

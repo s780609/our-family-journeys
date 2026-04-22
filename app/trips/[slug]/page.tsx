@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getAllTripSlugs, getTrip } from "@/lib/trips";
+import { getAllTripSlugs, getDefaultChecklist, getTrip } from "@/lib/trips";
 import { TripHero } from "@/components/TripHero";
 import { DaySection } from "@/components/DaySection";
 import { ScrollProgress, BackTop, DayCollapseToggle } from "@/components/ScrollUI";
@@ -34,6 +34,7 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const trip = await getTrip(slug);
   if (!trip) notFound();
+  const checklistDefaults = await getDefaultChecklist();
 
   const railDays = trip.days.map((d) => ({ num: d.num, date: d.date, theme: d.theme }));
   const mobileDays = trip.days.map((d) => ({
@@ -50,7 +51,11 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
       <main className="max-w-[1400px] mx-auto px-6 md:px-[72px] pb-32 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-14 relative z-[2]">
         <ScrollProgress days={railDays} />
         <section className="min-w-0">
-          <Checklist extra={trip.checklist} />
+          <Checklist
+            defaults={checklistDefaults}
+            extra={trip.checklist}
+            storageKey={`pretrip-checklist:${trip.slug}`}
+          />
           {trip.days.map((d) => (
             <DaySection key={d.num} day={d} />
           ))}

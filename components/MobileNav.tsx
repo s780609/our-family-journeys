@@ -7,7 +7,6 @@ export type DayMeta = { id: string; label: string; date: string; title: string }
 export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: DayMeta[]; tripTitle: string; hasChecklist?: boolean }) {
   const [active, setActive] = useState(0);
   const [progress, setProgress] = useState(0);
-  const [dayPositions, setDayPositions] = useState<number[]>(() => days.map(() => 0));
   const [sheetOpen, setSheetOpen] = useState(false);
   const [fabOpen, setFabOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -20,18 +19,11 @@ export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: Day
       const vh = window.innerHeight;
       const total = document.documentElement.scrollHeight - vh;
       let cur = 0;
-      const positions: number[] = [];
       days.forEach((d, i) => {
         const el = document.getElementById(d.id);
-        if (el) {
-          if (el.offsetTop - 180 <= sy) cur = i;
-          positions[i] = total > 0 ? Math.min(100, Math.max(0, (el.offsetTop / total) * 100)) : 0;
-        } else {
-          positions[i] = 0;
-        }
+        if (el && el.offsetTop - 180 <= sy) cur = i;
       });
       setActive(cur);
-      setDayPositions(positions);
       setScrolled(sy > 400);
       setProgress(total > 0 ? Math.min(100, (sy / total) * 100) : 0);
       if (sy > 200 && sy > lastY) setHideTop(true);
@@ -128,17 +120,17 @@ export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: Day
               {active + 1}/{days.length}
             </div>
           </div>
-          <div className="relative h-11 px-3">
+          <div className="relative h-[54px] px-3">
             {/* rail background */}
-            <div className="absolute left-3 right-3 top-1/2 -translate-y-1/2 h-[3px] rounded-full bg-[var(--paper-dark)]" />
+            <div className="absolute left-3 right-3 bottom-[18px] h-[3px] rounded-full bg-[var(--paper-dark)]" />
             {/* rail filled portion */}
             <div
-              className="absolute left-3 top-1/2 -translate-y-1/2 h-[3px] rounded-full bg-gradient-to-r from-[var(--coral)] to-[var(--sun)] transition-[width] duration-200"
+              className="absolute left-3 bottom-[18px] h-[3px] rounded-full bg-gradient-to-r from-[var(--coral)] to-[var(--sun)] transition-[width] duration-200"
               style={{ width: `calc((100% - 24px) * ${progress / 100})` }}
             />
-            {/* day dots */}
+            {/* day dots + labels */}
             {days.map((d, i) => {
-              const p = dayPositions[i] ?? 0;
+              const p = days.length > 1 ? (i / (days.length - 1)) * 100 : 50;
               const curr = i === active;
               const passed = i < active;
               return (
@@ -146,16 +138,31 @@ export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: Day
                   key={d.id}
                   onClick={() => jump(d.id)}
                   aria-label={`跳到 ${d.label} · ${d.date}`}
-                  className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-9 h-11 flex items-center justify-center"
-                  style={{ left: `calc(12px + (100% - 24px) * ${p / 100})` }}
+                  className="absolute top-0 h-full flex flex-col items-center pt-1"
+                  style={{
+                    left: `calc(12px + (100% - 24px) * ${p / 100})`,
+                    width: 44,
+                    transform: "translateX(-50%)",
+                  }}
                 >
                   <span
-                    className={`rounded-full transition-all ${
+                    className={`font-[family-name:var(--font-hand)] text-[12px] leading-none tracking-wide transition-colors ${
                       curr
-                        ? "w-[14px] h-[14px] bg-[var(--coral)] shadow-[0_0_0_4px_rgba(217,104,80,0.25)]"
+                        ? "text-[var(--coral)] font-bold"
                         : passed
-                        ? "w-3 h-3 bg-[var(--ocean)]"
-                        : "w-3 h-3 bg-[var(--paper)] border-2 border-[var(--rule)]"
+                        ? "text-[var(--ocean)]"
+                        : "text-[var(--ink-faint)]"
+                    }`}
+                  >
+                    {d.label}
+                  </span>
+                  <span
+                    className={`absolute rounded-full transition-all ${
+                      curr
+                        ? "bottom-[11px] w-[14px] h-[14px] bg-[var(--coral)] shadow-[0_0_0_4px_rgba(217,104,80,0.25)]"
+                        : passed
+                        ? "bottom-[12px] w-3 h-3 bg-[var(--ocean)]"
+                        : "bottom-[12px] w-3 h-3 bg-[var(--paper)] border-2 border-[var(--rule)]"
                     }`}
                   />
                 </button>

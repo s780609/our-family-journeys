@@ -214,6 +214,7 @@ function Photo({ s, mobile = false }: { s: any; mobile?: boolean }) {
   const aspectClass = mobile ? "aspect-[16/10] rounded-none" : "aspect-[4/3] rounded-md";
 
   if (src) {
+    const isRemote = /^https?:\/\//i.test(src);
     return (
       <div className={`relative overflow-hidden ${aspectClass} bg-[var(--paper-dark)]`}>
         <Image
@@ -222,7 +223,7 @@ function Photo({ s, mobile = false }: { s: any; mobile?: boolean }) {
           fill
           sizes={mobile ? "100vw" : "200px"}
           className="object-cover"
-          unoptimized
+          {...(isRemote ? { unoptimized: true } : {})}
         />
       </div>
     );

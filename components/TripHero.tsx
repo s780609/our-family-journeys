@@ -1,9 +1,12 @@
 import type { TripFrontmatter } from "@/lib/types";
+import { resolveTripMode } from "@/lib/trips";
 import Link from "next/link";
 
 export function TripHero({ trip }: { trip: TripFrontmatter }) {
   const nights = daysBetween(trip.startDate, trip.endDate);
   const days = nights + 1;
+  const mode = resolveTripMode(trip);
+  const modeBadge = mode === "planning" ? { text: "規劃中", cls: "bg-[var(--sun)] text-[var(--ink)]" } : { text: "旅程紀錄", cls: "bg-[var(--leaf)] text-white" };
 
   return (
     <header className="relative max-w-[1400px] mx-auto z-[2]">
@@ -32,6 +35,11 @@ export function TripHero({ trip }: { trip: TripFrontmatter }) {
           <div className="font-[family-name:var(--font-hand)] text-[18px] text-[var(--coral)] -rotate-1 inline-block mb-1 mt-2">
             our family journey · no.01
           </div>
+          <span
+            className={`inline-block font-[family-name:var(--font-hand)] text-[13px] px-2 py-0.5 rounded-xl -rotate-2 mb-2 ml-2 ${modeBadge.cls}`}
+          >
+            {modeBadge.text}
+          </span>
 
           <h1 className="font-serif font-black text-[38px] leading-[1] tracking-tight m-0 text-[var(--ink)]">
             {trip.title}
@@ -109,6 +117,11 @@ export function TripHero({ trip }: { trip: TripFrontmatter }) {
             <div className="font-[family-name:var(--font-hand)] text-[28px] text-[var(--coral)] -rotate-2 inline-block mb-1">
               our family journey · no.01
             </div>
+            <span
+              className={`inline-block font-[family-name:var(--font-hand)] text-[18px] px-3 py-0.5 rounded-xl -rotate-2 mb-2 ml-3 align-middle ${modeBadge.cls}`}
+            >
+              {modeBadge.text}
+            </span>
             <h1 className="font-serif font-black text-[clamp(48px,6.5vw,88px)] leading-[0.95] tracking-tight m-0 text-[var(--ink)]">
               {trip.title.replace(trip.year.toString(), "").trim().split(/\s+/)[0] || trip.title}
               <span className="relative inline-block text-[var(--ocean)]">

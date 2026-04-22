@@ -1,5 +1,6 @@
 import type { Day } from "@/lib/types";
 import { StopBlock } from "./StopBlock";
+import { DayShareButton } from "./DayShareButton";
 
 export function DaySection({ day }: { day: Day }) {
   return (
@@ -37,6 +38,10 @@ export function DaySection({ day }: { day: Day }) {
           </svg>
         </button>
       </div>
+      {/* Mobile — share button outside the clickable collapse area */}
+      <div className="md:hidden -mt-3 mb-4 flex justify-end">
+        <DayShareButton dayNum={day.num} dayTitle={day.theme} />
+      </div>
 
       {/* Desktop header — keep original giant D1/D2 */}
       <div className="hidden md:flex day-header items-end gap-5 mb-8 pb-4 border-b-2 border-[var(--ink)] relative cursor-pointer select-none group">
@@ -62,6 +67,10 @@ export function DaySection({ day }: { day: Day }) {
         >
           — 收合
         </button>
+        {/* Outside the collapse-click; stopPropagation on button keeps clicks isolated */}
+        <div className="shrink-0 self-center pb-1">
+          <DayShareButton dayNum={day.num} dayTitle={day.theme} />
+        </div>
       </div>
 
       <div className="day-content">

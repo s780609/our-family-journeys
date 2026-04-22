@@ -4,6 +4,7 @@ import matter from "gray-matter";
 import { remark } from "remark";
 import html from "remark-html";
 import type { Trip, TripFrontmatter } from "./types";
+export { resolveTripMode } from "./trip-mode";
 
 const TRIPS_DIR = path.join(process.cwd(), "content", "trips");
 

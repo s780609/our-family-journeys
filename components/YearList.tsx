@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import type { Trip } from "@/lib/types";
+import { resolveTripMode } from "@/lib/trip-mode";
 
 export function YearList({
   byYear,
@@ -52,15 +53,26 @@ export function YearList({
               </button>
               {isOpen && (
                 <div className="pb-3 pl-1 flex flex-col gap-2.5">
-                  {trips.map((t) => (
+                  {trips.map((t) => {
+                    const mode = resolveTripMode(t);
+                    return (
                     <Link
                       key={t.slug}
                       href={`/trips/${t.slug}`}
                       className="group flex items-center justify-between gap-3 p-3.5 md:p-3 rounded-xl md:rounded-lg bg-[var(--paper)] hover:bg-[var(--coral)] hover:text-white active:scale-[0.99] transition-all no-underline min-h-[56px]"
                     >
                       <div className="min-w-0">
-                        <div className="font-serif font-bold text-[15px] text-[var(--ink)] group-hover:text-white truncate">
-                          {t.title}
+                        <div className="font-serif font-bold text-[15px] text-[var(--ink)] group-hover:text-white truncate flex items-center gap-2">
+                          <span className="truncate">{t.title}</span>
+                          <span
+                            className={`shrink-0 font-[family-name:var(--font-hand)] text-[11px] px-1.5 py-px rounded-full group-hover:bg-white/20 group-hover:text-white ${
+                              mode === "planning"
+                                ? "bg-[var(--sun)]/40 text-[var(--ink)]"
+                                : "bg-[var(--leaf)]/25 text-[var(--leaf)]"
+                            }`}
+                          >
+                            {mode === "planning" ? "規劃中" : "紀錄"}
+                          </span>
                         </div>
                         <div className="text-xs text-[var(--ink-faint)] group-hover:text-white/80 mt-0.5">
                           {t.dateRangeLabel} · {t.location}
@@ -68,7 +80,8 @@ export function YearList({
                       </div>
                       <span className="text-[var(--ink-faint)] group-hover:text-white shrink-0">→</span>
                     </Link>
-                  ))}
+                    );
+                  })}
                 </div>
               )}
             </div>

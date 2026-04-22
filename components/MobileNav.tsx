@@ -4,10 +4,12 @@ import { haptic } from "@/lib/mobile";
 
 export type DayMeta = { id: string; label: string; date: string; title: string };
 
-export function MobileNav({ days, tripTitle }: { days: DayMeta[]; tripTitle: string }) {
+export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: DayMeta[]; tripTitle: string; hasChecklist?: boolean }) {
   const [active, setActive] = useState(0);
   const [progress, setProgress] = useState(0);
   const [sheetOpen, setSheetOpen] = useState(false);
+  const [fabOpen, setFabOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const [hideTop, setHideTop] = useState(false);
   const [lastY, setLastY] = useState(0);
 
@@ -21,9 +23,9 @@ export function MobileNav({ days, tripTitle }: { days: DayMeta[]; tripTitle: str
         if (el && el.offsetTop - 180 <= sy) cur = i;
       });
       setActive(cur);
+      setScrolled(sy > 400);
       const total = document.documentElement.scrollHeight - vh;
       setProgress(total > 0 ? Math.min(100, (sy / total) * 100) : 0);
-      // Auto-hide top bar when scrolling down past 200px
       if (sy > 200 && sy > lastY) setHideTop(true);
       else setHideTop(false);
       setLastY(sy);
@@ -42,16 +44,45 @@ export function MobileNav({ days, tripTitle }: { days: DayMeta[]; tripTitle: str
     }
   };
 
+  const share = async () => {
+    haptic();
+    setFabOpen(false);
+    const nav: any = navigator;
+    if (nav.share) {
+      try { await nav.share({ title: tripTitle, url: location.href }); } catch {}
+    } else {
+      try { await navigator.clipboard.writeText(location.href); alert("連結已複製"); } catch {}
+    }
+  };
+
+  const openChecklist = () => {
+    haptic();
+    setFabOpen(false);
+    const el = document.getElementById("pre-trip-checklist");
+    if (el) window.scrollTo({ top: el.offsetTop - 100, behavior: "smooth" });
+  };
+
+  const openTweaks = () => {
+    haptic();
+    setFabOpen(false);
+    (window as any).__openTweaks?.();
+  };
+
+  const backTop = () => {
+    haptic();
+    setFabOpen(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <>
-      {/* Top: back chip + day pill strip — auto-hides on scroll down */}
+      {/* Top bar — back + title + day pills */}
       <div
         className={`md:hidden sticky top-0 z-40 transition-transform duration-300 ${
           hideTop ? "-translate-y-full" : "translate-y-0"
         }`}
       >
         <div className="bg-[var(--paper)]/92 backdrop-blur-md border-b border-[var(--rule)]">
-          {/* Trip title strip — tiny */}
           <div className="flex items-center gap-2 px-3 pt-2 pb-1">
             <a
               href="/"
@@ -75,7 +106,6 @@ export function MobileNav({ days, tripTitle }: { days: DayMeta[]; tripTitle: str
               {active + 1}/{days.length}
             </div>
           </div>
-          {/* Day pills */}
           <div className="flex gap-1.5 overflow-x-auto px-3 pb-2 snap-x snap-mandatory scrollbar-hide">
             {days.map((d, i) => (
               <button
@@ -94,7 +124,6 @@ export function MobileNav({ days, tripTitle }: { days: DayMeta[]; tripTitle: str
               </button>
             ))}
           </div>
-          {/* Progress */}
           <div className="h-[2px] bg-[var(--rule)] overflow-hidden">
             <div
               className="h-full bg-gradient-to-r from-[var(--coral)] to-[var(--sun)] transition-[width] duration-200"
@@ -104,49 +133,84 @@ export function MobileNav({ days, tripTitle }: { days: DayMeta[]; tripTitle: str
         </div>
       </div>
 
-      {/* Bottom FAB — single big button, more prominent */}
-      <button
-        onClick={() => {
-          haptic("medium");
-          setSheetOpen(true);
-        }}
-        aria-label="跳到某天"
-        className="md:hidden fixed right-4 z-50 bg-[var(--coral)] text-white rounded-full px-5 h-14 flex items-center gap-2 shadow-[0_8px_24px_rgba(217,104,80,0.45)] active:scale-95 transition"
+      {/* ═══════════ FAB Stack — right-bottom, vertical ═══════════ */}
+      <div
+        className="md:hidden fixed right-4 z-50 flex flex-col items-end gap-2.5"
         style={{ bottom: "calc(env(safe-area-inset-bottom) + 16px)" }}
       >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} className="w-5 h-5">
-          <rect x={3} y={4} width={18} height={18} rx={2} />
-          <path d="M16 2v4M8 2v4M3 10h18" strokeLinecap="round" />
-        </svg>
-        <span className="font-bold text-[15px]">跳到某天</span>
-      </button>
+        {/* Small secondary FABs — reveal when fabOpen */}
+        <div
+          className={`flex flex-col items-end gap-2.5 transition-all duration-200 origin-bottom-right ${
+            fabOpen ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-75 translate-y-2 pointer-events-none"
+          }`}
+        >
+          {scrolled && (
+            <MiniFab label="回頂部" onClick={backTop}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} className="w-5 h-5">
+                <path d="M12 19V5M5 12l7-7 7 7" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </MiniFab>
+          )}
+          {hasChecklist && (
+            <MiniFab label="行前清單" onClick={openChecklist}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
+                <rect x={4} y={4} width={16} height={16} rx={2} />
+                <path d="M8 10l2 2 4-4M8 16h6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </MiniFab>
+          )}
+          <MiniFab label="分享" onClick={share}>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
+              <path d="M12 3v12M8 7l4-4 4 4M5 14v5a2 2 0 002 2h10a2 2 0 002-2v-5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </MiniFab>
+          <MiniFab label="主題" onClick={openTweaks}>
+            <span className="font-[family-name:var(--font-hand)] text-xl leading-none">✎</span>
+          </MiniFab>
+        </div>
 
-      {/* Share FAB — secondary smaller */}
-      <button
-        onClick={async () => {
-          haptic();
-          const nav: any = navigator;
-          if (nav.share) {
-            try {
-              await nav.share({ title: tripTitle, url: location.href });
-            } catch {}
-          } else {
-            try {
-              await navigator.clipboard.writeText(location.href);
-              alert("連結已複製");
-            } catch {}
-          }
-        }}
-        aria-label="分享"
-        className="md:hidden fixed left-4 z-50 bg-[var(--card-bg)] border border-[var(--rule)] text-[var(--ink)] rounded-full w-12 h-12 flex items-center justify-center shadow-[var(--shadow-soft)] active:scale-95 transition"
-        style={{ bottom: "calc(env(safe-area-inset-bottom) + 17px)" }}
-      >
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} className="w-5 h-5">
-          <path d="M12 3v12M8 7l4-4 4 4M5 14v5a2 2 0 002 2h10a2 2 0 002-2v-5" strokeLinecap="round" strokeLinejoin="round" />
-        </svg>
-      </button>
+        {/* Main FAB group — jump day + toggle more */}
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => {
+              haptic("light");
+              setFabOpen((o) => !o);
+            }}
+            aria-label={fabOpen ? "收合" : "更多"}
+            className={`w-12 h-12 rounded-full bg-[var(--card-bg)] border border-[var(--rule)] text-[var(--ink)] flex items-center justify-center shadow-[var(--shadow-soft)] active:scale-95 transition ${
+              fabOpen ? "rotate-45 bg-[var(--paper-dark)]" : ""
+            }`}
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} className="w-5 h-5">
+              <path d="M12 5v14M5 12h14" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </button>
+          <button
+            onClick={() => {
+              haptic("medium");
+              setSheetOpen(true);
+            }}
+            aria-label="跳到某天"
+            className="bg-[var(--coral)] text-white rounded-full pl-4 pr-5 h-14 flex items-center gap-2 shadow-[0_8px_24px_rgba(217,104,80,0.45)] active:scale-95 transition"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2.2} className="w-5 h-5">
+              <rect x={3} y={4} width={18} height={18} rx={2} />
+              <path d="M16 2v4M8 2v4M3 10h18" strokeLinecap="round" />
+            </svg>
+            <span className="font-bold text-[15px]">跳到某天</span>
+          </button>
+        </div>
+      </div>
 
-      {/* Spacer for FAB */}
+      {/* Scrim for fabOpen */}
+      <div
+        className={`md:hidden fixed inset-0 z-40 transition-opacity ${
+          fabOpen ? "opacity-100 bg-black/10 backdrop-blur-[1px]" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setFabOpen(false)}
+      />
+
+      {/* Spacer */}
       <div className="md:hidden" style={{ height: "calc(80px + env(safe-area-inset-bottom))" }} />
 
       {/* Day jump sheet */}
@@ -199,5 +263,18 @@ export function MobileNav({ days, tripTitle }: { days: DayMeta[]; tripTitle: str
         </div>
       </div>
     </>
+  );
+}
+
+function MiniFab({ children, label, onClick }: { children: React.ReactNode; label: string; onClick: () => void }) {
+  return (
+    <button
+      onClick={onClick}
+      aria-label={label}
+      className="flex items-center gap-2 pl-3.5 pr-4 h-11 rounded-full bg-[var(--card-bg)] border border-[var(--rule)] text-[var(--ink)] shadow-[var(--shadow-soft)] active:scale-95 transition"
+    >
+      {children}
+      <span className="font-serif font-bold text-sm">{label}</span>
+    </button>
   );
 }

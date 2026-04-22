@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import type { Day } from "@/lib/types";
 
 export function ScrollProgress({ days }: { days: { num: number; date: string; theme: string }[] }) {
@@ -35,7 +35,7 @@ export function ScrollProgress({ days }: { days: { num: number; date: string; th
 
   return (
     <>
-      {/* top rail */}
+      {/* top rail — desktop + mobile, thin at top */}
       <div className="fixed top-0 left-0 right-0 h-1 z-[100]">
         <div
           className="h-full bg-gradient-to-r from-[var(--ocean)] via-[var(--coral)] to-[var(--sun)] transition-[width] duration-[120ms] ease-out shadow-[0_0_10px_rgba(217,104,80,0.4)]"
@@ -43,7 +43,7 @@ export function ScrollProgress({ days }: { days: { num: number; date: string; th
         />
       </div>
 
-      {/* sidebar rail */}
+      {/* sidebar rail — desktop only */}
       <aside className="sticky top-10 self-start max-h-[calc(100vh-80px)] flex flex-col pt-5 max-lg:hidden">
         <div className="font-[family-name:var(--font-hand)] text-[22px] text-[var(--ink-faint)] mb-6 tracking-wide">
           — 旅程時間軸 —
@@ -110,6 +110,7 @@ export function ScrollProgress({ days }: { days: { num: number; date: string; th
   );
 }
 
+// BackTop — desktop only now; mobile version lives inside MobileNav's FAB stack
 export function BackTop() {
   const [visible, setVisible] = useState(false);
   useEffect(() => {
@@ -121,7 +122,7 @@ export function BackTop() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      className={`fixed bottom-6 left-6 w-12 h-12 rounded-full bg-[var(--card-bg)] border border-[var(--rule)] flex items-center justify-center cursor-pointer shadow-[var(--shadow-soft)] transition-all z-[99] text-[var(--ink)] font-[family-name:var(--font-hand)] text-lg hover:bg-[var(--coral)] hover:text-white hover:border-[var(--coral)] ${
+      className={`hidden md:flex fixed bottom-6 left-6 w-12 h-12 rounded-full bg-[var(--card-bg)] border border-[var(--rule)] items-center justify-center cursor-pointer shadow-[var(--shadow-soft)] transition-all z-[99] text-[var(--ink)] font-[family-name:var(--font-hand)] text-lg hover:bg-[var(--coral)] hover:text-white hover:border-[var(--coral)] ${
         visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5 pointer-events-none"
       }`}
       title="回頂部"
@@ -132,7 +133,6 @@ export function BackTop() {
 }
 
 export function DayCollapseToggle() {
-  // wire up click handlers on all .day-header in effect
   useEffect(() => {
     const headers = document.querySelectorAll<HTMLElement>(".day-header");
     const handlers: Array<() => void> = [];

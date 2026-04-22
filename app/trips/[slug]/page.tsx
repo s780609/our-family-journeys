@@ -5,6 +5,7 @@ import { DaySection } from "@/components/DaySection";
 import { ScrollProgress, BackTop, DayCollapseToggle } from "@/components/ScrollUI";
 import { TweaksPanel } from "@/components/TweaksPanel";
 import { MobileNav } from "@/components/MobileNav";
+import { Checklist } from "@/components/Checklist";
 
 export async function generateStaticParams() {
   const slugs = await getAllTripSlugs();
@@ -33,11 +34,12 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
 
   return (
     <>
-      <MobileNav days={mobileDays} tripTitle={trip.title} />
+      <MobileNav days={mobileDays} tripTitle={trip.title} hasChecklist />
       <TripHero trip={trip} />
       <main className="max-w-[1400px] mx-auto px-6 md:px-[72px] pb-32 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-14 relative z-[2]">
         <ScrollProgress days={railDays} />
         <section className="min-w-0">
+          <Checklist extra={trip.checklist} />
           {trip.days.map((d) => (
             <DaySection key={d.num} day={d} />
           ))}

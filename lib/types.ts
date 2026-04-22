@@ -96,6 +96,7 @@ export interface TripFrontmatter {
   hotel?: { name: string; area: string; nights: number };
   transport?: { name: string; note: string };
   flights?: { outbound: string; return: string };
+  checklist?: { id: string; title: string; icon: string; items: { id: string; label: string; note?: string }[] }[];
   days: Day[];
 }
 

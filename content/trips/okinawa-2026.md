@@ -29,6 +29,16 @@ transport:
 flights:
   outbound: MM922 · 桃園 T1 09:35 → 那霸 12:20
   return: MM929 · 那霸 16:45 → 桃園 T1 17:20
+checklist:
+  - id: okinawa
+    title: 沖繩專屬
+    icon: 🏝️
+    items:
+      - { id: carseat, label: 兒童安全座椅確認(COLDIO 已預訂 × 2) }
+      - { id: beach, label: 泳衣 · 泳褲 · 浮具 · 海灘玩沙工具 }
+      - { id: ic, label: "Suica / OKICA 交通卡(國內線買不到,建議抵沖後補)" }
+      - { id: offline, label: 下載離線地圖:那霸 · 中部 · 北部恩納 }
+      - { id: eat-reservation, label: 燒肉五苑 · 海人食堂預約確認 }
 days:
   - num: 1
     date: "4/29 (三)"

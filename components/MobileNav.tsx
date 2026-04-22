@@ -39,9 +39,19 @@ export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: Day
     haptic("medium");
     setSheetOpen(false);
     const el = document.getElementById(id);
-    if (el) {
-      setTimeout(() => window.scrollTo({ top: el.offsetTop, behavior: "smooth" }), 120);
-    }
+    if (!el) return;
+    setTimeout(() => {
+      const rect = el.getBoundingClientRect();
+      const sectionTop = rect.top + window.scrollY;
+      const vh = window.innerHeight;
+      const stickyOffset = 130;
+      const available = vh - stickyOffset;
+      const target =
+        rect.height <= available
+          ? sectionTop - stickyOffset - (available - rect.height) / 2
+          : sectionTop - stickyOffset;
+      window.scrollTo({ top: Math.max(0, target), behavior: "smooth" });
+    }, 120);
   };
 
   const share = async () => {

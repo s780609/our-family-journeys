@@ -30,7 +30,18 @@ export function ScrollProgress({ days }: { days: { num: number; date: string; th
   }, []);
 
   function go(n: number) {
-    document.getElementById(`day-${n}`)?.scrollIntoView({ behavior: "smooth", block: "start" });
+    const el = document.getElementById(`day-${n}`);
+    if (!el) return;
+    const rect = el.getBoundingClientRect();
+    const sectionTop = rect.top + window.scrollY;
+    const vh = window.innerHeight;
+    const topOffset = 40;
+    const available = vh - topOffset;
+    const target =
+      rect.height <= available
+        ? sectionTop - topOffset - (available - rect.height) / 2
+        : sectionTop - topOffset;
+    window.scrollTo({ top: Math.max(0, target), behavior: "smooth" });
   }
 
   return (

@@ -53,11 +53,11 @@ budget:
     - label: 機場到租車店計程車
       amount: "¥4,000–5,600"
     - label: 沖繩世界門票
-      amount: "約 ¥9,000"
+      amount: "TWD 1,500(4 大人)"
     - label: DMM Kariyushi 水族館
-      amount: "約 ¥9,600–11,200"
+      amount: "TWD 1,620(4 大人)"
     - label: 沖縄こどもの国
-      amount: "¥4,000"
+      amount: "TWD 1,620(4 大人)"
     - label: 油錢(Alphard 全程約 400km)
       amount: "約 ¥8,000–10,000"
     - label: 餐飲 5 天(美國村/園區快餐為主)

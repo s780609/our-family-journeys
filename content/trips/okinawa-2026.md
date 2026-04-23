@@ -61,17 +61,17 @@ budget:
     - label: 油錢(Alphard 全程約 400km)
       amount: "約 ¥8,000–10,000"
     - label: 餐飲 5 天(美國村/園區快餐為主)
-      amount: "¥50,000–75,000"
-      note: 每日約 ¥10,000–15,000
+      amount: "¥60,000"
+      note: 每日約 ¥12,000
     - label: 匯率參考
       amount: "台幣:日圓 = 1:5"
   total:
     - label: 日圓小計
-      amount: "¥338,700 – ¥367,300"
+      amount: "¥348,700 – ¥352,300"
     - label: 台幣小計
       amount: "TWD 84,540"
     - label: 總計粗估(全部換算台幣)
-      amount: "TWD 152,280 – 158,000"
+      amount: "TWD 154,280 – 155,000"
       note: 不含伴手禮、額外購物 · 日圓以 1:5 換算
 days:
   - num: 1

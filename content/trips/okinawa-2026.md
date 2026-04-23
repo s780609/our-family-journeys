@@ -46,8 +46,8 @@ budget:
     - label: 機票
       amount: "TWD 79,800"
       note: 含稅
-    - label: 飯店 4 晚
-      amount: "¥117,450 + ¥105,300"
+    - label: 飯店 4 晚(Monba Apartment Hotel)
+      amount: "¥117,450 + ¥105,300 = ¥222,750"
     - label: 租車 4 天(含兒童椅)
       amount: "¥53,950"
     - label: 機場到租車店計程車
@@ -63,13 +63,11 @@ budget:
     - label: 餐飲 5 天(美國村/園區快餐為主)
       amount: "¥50,000–75,000"
       note: 每日約 ¥10,000–15,000
-    - label: 酒店 4 晚(Monba Apartment Hotel,參考價)
-      amount: "約 ¥80,000–100,000"
     - label: 匯率參考
       amount: "台幣:日圓 = 1:5"
   total:
     label: 總計粗估
-    amount: "¥220,000–270,000"
+    amount: "¥366,500"
     note: 不含伴手禮、額外購物、機票
 days:
   - num: 1

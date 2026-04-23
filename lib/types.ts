@@ -133,7 +133,7 @@ export interface Budget {
   title?: string;
   note?: string;
   items: BudgetItem[];
-  total?: BudgetItem;
+  total?: BudgetItem | BudgetItem[];
 }
 
 export interface Trip extends TripFrontmatter {

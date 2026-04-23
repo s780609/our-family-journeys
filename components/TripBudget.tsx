@@ -51,19 +51,40 @@ export function TripBudget({ budget }: { budget: Budget }) {
       </ul>
 
       {budget.total && (
-        <div className="mt-4 pt-4 border-t-2 border-[var(--ink)]">
-          <div className="flex items-baseline justify-between gap-3">
-            <span className="font-serif font-bold text-base md:text-lg text-[var(--ink)]">
-              {budget.total.label}
-            </span>
-            <span className="font-serif font-black text-lg md:text-[26px] text-[var(--coral)] tabular-nums whitespace-nowrap">
-              {budget.total.amount}
-            </span>
-          </div>
-          {budget.total.note && (
-            <div className="text-[11px] md:text-xs text-[var(--ink-faint)] mt-1 text-right">
-              {budget.total.note}
-            </div>
+        <div className="mt-4 pt-4 border-t-2 border-[var(--ink)] flex flex-col gap-2">
+          {(Array.isArray(budget.total) ? budget.total : [budget.total]).map(
+            (row, idx, arr) => {
+              const isLast = idx === arr.length - 1;
+              return (
+                <div key={idx}>
+                  <div className="flex items-baseline justify-between gap-3">
+                    <span
+                      className={
+                        isLast
+                          ? "font-serif font-bold text-base md:text-lg text-[var(--ink)]"
+                          : "font-serif font-bold text-sm md:text-base text-[var(--ink-soft)]"
+                      }
+                    >
+                      {row.label}
+                    </span>
+                    <span
+                      className={
+                        isLast
+                          ? "font-serif font-black text-lg md:text-[26px] text-[var(--coral)] tabular-nums whitespace-nowrap"
+                          : "font-serif font-bold text-base md:text-lg text-[var(--ink)] tabular-nums whitespace-nowrap"
+                      }
+                    >
+                      {row.amount}
+                    </span>
+                  </div>
+                  {row.note && (
+                    <div className="text-[11px] md:text-xs text-[var(--ink-faint)] mt-1 text-right">
+                      {row.note}
+                    </div>
+                  )}
+                </div>
+              );
+            },
           )}
         </div>
       )}

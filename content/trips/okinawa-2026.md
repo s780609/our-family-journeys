@@ -66,9 +66,13 @@ budget:
     - label: 匯率參考
       amount: "台幣:日圓 = 1:5"
   total:
-    label: 總計粗估
-    amount: "¥366,500"
-    note: 不含伴手禮、額外購物、機票
+    - label: 日圓小計
+      amount: "¥338,700 – ¥367,300"
+    - label: 台幣小計
+      amount: "TWD 84,540"
+    - label: 總計粗估(全部換算台幣)
+      amount: "TWD 152,280 – 158,000"
+      note: 不含伴手禮、額外購物 · 日圓以 1:5 換算
 days:
   - num: 1
     date: "4/29 (三)"

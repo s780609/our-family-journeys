@@ -77,6 +77,9 @@ days:
     sub: Arrival · American Village
     stops:
       - type: move
+        time: "07:30"
+        text: 集合時間 07:30 · 集合地點 桃園機場 1 航廈（T1）
+      - type: move
         time: "09:35"
         text: 桃園機場 T1 出發 → MM922 → 那霸機場 12:20 抵達
       - type: move

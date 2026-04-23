@@ -9,8 +9,8 @@ dateRangeLabel: 4/29 – 5/3
 location: 沖繩 Okinawa
 locationEn: Okinawa, Japan
 # Google Maps 圖釘座標(首頁互動地圖)
-lat: 26.3344
-lng: 127.8056
+lat: 26.314946
+lng: 127.755801
 # 舊版手繪地圖座標(保留作為 fallback)
 mapX: 62
 mapY: 55

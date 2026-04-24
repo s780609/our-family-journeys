@@ -164,10 +164,10 @@ days:
     sub: 鐘乳石洞探險 + 琉球文化體驗
     stops:
       - type: move
-        time: 09:00 – 09:30
+        time: "10:00"
         text: 從美國村酒店出發 → 沖繩世界(約 50–70 分鐘)
       - type: spot
-        time: 10:30 – 15:00
+        time: 11:30 – 16:00
         badge: 主要景點
         badgeType: main
         title: 沖繩世界 おきなわワールド
@@ -195,7 +195,7 @@ days:
           - { name: 園內餐廳, note: 沖繩料理定食、沖繩そば }
           - { name: 園內輕食攤位, note: 冰淇淋、小吃補給 }
       - type: move
-        time: 15:30 – 17:00
+        time: 16:30 – 18:00
         text: 開車返回美國村(約 50–70 分鐘)
       - type: meal
         time: 晚餐
@@ -212,10 +212,10 @@ days:
     sub: 室內互動 · Outlet · PARCO CITY
     stops:
       - type: move
-        time: 08:30 – 09:00
+        time: "10:00"
         text: 從酒店出發 → 豐崎區域(約 30–40 分鐘)
       - type: spot
-        time: 10:00 – 12:30
+        time: 11:30 – 14:00
         badge: 主要景點
         badgeType: main
         title: DMM Kariyushi 水族館
@@ -232,7 +232,7 @@ days:
           - 全室內,下雨或炎熱天最佳選擇
           - 有哺乳室與尿布台
       - type: spot
-        time: 12:30 – 14:30
+        time: 14:00 – 16:00
         badge: 午餐 + 逛街
         title: 沖繩 ASHIBINAA Outlet
         photo:
@@ -243,7 +243,7 @@ days:
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Okinawa+Outlet+Mall+Ashibinaa+1-188+Toyosaki+Tomigusuku+Okinawa", text: Google Maps }
       - type: spot
-        time: 14:40 – 17:30
+        time: 16:10 – 19:00
         badge: 下午主行程
         title: San-A Urasoe West Coast PARCO CITY
         photo:
@@ -258,11 +258,11 @@ days:
         hint: 若小孩或長輩較累可改去
         items:
           - name: 瀨長島 Umikaji Terrace
-            meta: 14:40 – 17:00 · 海景露台
+            meta: 16:10 – 18:30 · 海景露台
             note: 純白建築群,海景露台散步、拍照、喝咖啡,非常放鬆
             url: "https://maps.app.goo.gl/YbABAZPNGGTvTRyJA"
       - type: move
-        time: 17:40 前
+        time: 19:10 前
         text: 返回美國村酒店休息
       - type: meal
         time: 晚餐
@@ -279,10 +279,10 @@ days:
     sub: 動物 + 遊樂設施 + 科學體驗
     stops:
       - type: move
-        time: "09:00"
+        time: "10:00"
         text: 從酒店出發(開車約 20–30 分鐘)
       - type: spot
-        time: 10:00 – 15:00
+        time: 11:00 – 16:00
         badge: 主要景點
         badgeType: main
         title: 沖縄こどもの国

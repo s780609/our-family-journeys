@@ -212,10 +212,10 @@ days:
     sub: 室內互動 · Outlet · PARCO CITY
     stops:
       - type: move
-        time: "10:00"
+        time: "09:00"
         text: 從酒店出發 → 豐崎區域(約 30–40 分鐘)
       - type: spot
-        time: 11:30 – 14:00
+        time: 10:00 – 12:30
         badge: 主要景點
         badgeType: main
         title: DMM Kariyushi 水族館
@@ -232,7 +232,7 @@ days:
           - 全室內,下雨或炎熱天最佳選擇
           - 有哺乳室與尿布台
       - type: spot
-        time: 14:00 – 16:00
+        time: 12:30 – 14:30
         badge: 午餐 + 逛街
         title: 沖繩 ASHIBINAA Outlet
         photo:
@@ -243,7 +243,7 @@ days:
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Okinawa+Outlet+Mall+Ashibinaa+1-188+Toyosaki+Tomigusuku+Okinawa", text: Google Maps }
       - type: spot
-        time: 16:10 – 19:00
+        time: 14:40 – 17:30
         badge: 下午主行程
         title: San-A Urasoe West Coast PARCO CITY
         photo:
@@ -258,17 +258,17 @@ days:
         hint: 若小孩或長輩較累可改去
         items:
           - name: 瀨長島 Umikaji Terrace
-            meta: 16:10 – 18:30 · 海景露台
+            meta: 14:40 – 17:00 · 海景露台
             note: 純白建築群,海景露台散步、拍照、喝咖啡,非常放鬆
             url: "https://maps.app.goo.gl/YbABAZPNGGTvTRyJA"
       - type: move
-        time: 19:10 前
+        time: 17:40 前
         text: 返回美國村酒店休息
       - type: meal
         time: 晚餐
         label: 美國村 · 燒肉和牛犒賞夜(三選一)
         options:
-          - { name: 琉球の牛 北谷店, note: "Macairi Resort 2F · 沖繩和牛 · 4.8 高分熱門 · 強烈建議提前訂位", url: "https://maps.google.com/?cid=8696307258036282159" }
+          - { name: 迴轉壽司市場 美浜店, note: "美浜 · 家庭友善迴轉壽司", url: "https://maps.google.com/?cid=15012902671948034205" }
           - { name: Yakiniku RIKIO, note: Distortion Bldg 2F · 美國村正中央 · 平價燒肉, url: "https://maps.google.com/?cid=10662811313127968860" }
           - { name: Steak House 88 北谷店, note: "at's chatan 2F · 牛排+沙拉湯飯吃到飽 · 適合家庭", url: "https://maps.google.com/?cid=12446748904123655814" }
 
@@ -319,7 +319,7 @@ days:
         label: 美國村 · 沖繩風最後夜(三選一)
         options:
           - { name: オーシャンBoo! 北谷店, note: "Macairi Resort 1F · 阿古豬涮涮鍋 · 海景視野(湯底要請店家確認海鮮)", url: "https://maps.google.com/?cid=7580109387559142611" }
-          - { name: 美咲食堂, note: Depot Island A 2F · 沖繩家庭料理定食 · 有兒童椅, url: "https://maps.google.com/?cid=12528368423393191323" }
+          - { name: "美浜殿内 (Mihama Dunchi)", note: "美浜 34-3 デポセントラルビル 2F · 步行約 4 分 · 17:00–23:00", url: "https://www.google.com/maps/search/?api=1&query=美浜殿内&query_place_id=ChIJaXDU6h8T5TQR8oYiX563T8A" }
           - { name: Four Seasons 牛排屋 美浜店, note: "美浜 2-5-2 · 鐵板牛排現場表演(週四公休 · 週六營業)", url: "https://maps.google.com/?cid=13043443127273491759" }
 
   - num: 5

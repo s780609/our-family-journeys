@@ -114,6 +114,7 @@ export interface ChecklistItem {
   id: string;
   label: string;
   note?: string;
+  url?: string;
 }
 
 export interface ChecklistCategory {

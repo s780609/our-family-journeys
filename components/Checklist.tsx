@@ -160,7 +160,19 @@ export function Checklist({
                                 on ? "line-through text-[var(--ink-faint)]" : "text-[var(--ink)]"
                               }`}
                             >
-                              {it.label}
+                              {it.url ? (
+                                <a
+                                  href={it.url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  onClick={(e) => e.stopPropagation()}
+                                  className="underline decoration-dotted underline-offset-2 hover:text-[var(--coral)]"
+                                >
+                                  {it.label}
+                                </a>
+                              ) : (
+                                it.label
+                              )}
                               {it.note && (
                                 <span className="block text-xs text-[var(--ink-faint)] mt-0.5">
                                   {it.note}

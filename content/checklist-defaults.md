@@ -8,6 +8,7 @@ categories:
       - { id: visa, label: "簽證 / 免簽確認" }
       - { id: license, label: "駕照 + 日文譯本" }
       - { id: booking, label: "訂房 / 租車 / 機票確認單" }
+      - { id: vjw, label: "Visit Japan Web(入境審查 QR)", url: "https://services.digital.go.jp/zh-cmn-hant/visit-japan-web/?fr=ev15123C0401M03" }
   - id: money
     title: 金融
     icon: 💴

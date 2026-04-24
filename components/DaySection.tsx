@@ -1,15 +1,8 @@
-import type { Day, FlightSegment } from "@/lib/types";
+import type { Day } from "@/lib/types";
 import { StopBlock } from "./StopBlock";
 import { DayShareButton } from "./DayShareButton";
-import { FlightCard } from "./FlightCard";
 
-export function DaySection({
-  day,
-  flight,
-}: {
-  day: Day;
-  flight?: { segment: FlightSegment; direction: "outbound" | "return" };
-}) {
+export function DaySection({ day }: { day: Day }) {
   return (
     <section
       id={`day-${day.num}`}
@@ -81,9 +74,6 @@ export function DaySection({
       </div>
 
       <div className="day-content">
-        {flight && (
-          <FlightCard flight={flight.segment} direction={flight.direction} />
-        )}
         {/* Mobile: no indent, no timeline rail — cards are full-bleed */}
         <div className="md:hidden flex flex-col gap-5">
           {day.stops.map((stop, i) => (

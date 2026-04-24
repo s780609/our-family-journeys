@@ -27,24 +27,8 @@ transport:
   name: Alphard 40 系
   note: COLDIO 那霸機場店 · 含兒童椅
 flights:
-  outbound:
-    airline: Peach Aviation
-    code: MM922
-    date: 2026-04-29
-    weekday: 三
-    from: { iata: TPE, city: 桃園, terminal: T1, time: "09:35" }
-    to: { iata: OKA, city: 那霸, time: "12:20" }
-    duration: 1 小時 45 分
-    pnr: 59N5U2
-  return:
-    airline: Peach Aviation
-    code: MM929
-    date: 2026-05-03
-    weekday: 日
-    from: { iata: OKA, city: 那霸, time: "16:45" }
-    to: { iata: TPE, city: 桃園, terminal: T1, time: "17:20" }
-    duration: 1 小時 35 分
-    pnr: 59N5U2
+  outbound: MM922 · 桃園 T1 09:35 → 那霸 12:20
+  return: MM929 · 那霸 16:45 → 桃園 T1 17:20
 checklist:
   - id: okinawa
     title: 沖繩專屬

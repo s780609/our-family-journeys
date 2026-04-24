@@ -104,29 +104,10 @@ export interface TripFrontmatter {
   members?: string[];
   hotel?: { name: string; area: string; nights: number };
   transport?: { name: string; note: string };
-  flights?: { outbound: FlightSegment; return: FlightSegment };
+  flights?: { outbound: string; return: string };
   checklist?: ChecklistCategory[];
   budget?: Budget;
   days: Day[];
-}
-
-export interface FlightEndpoint {
-  iata: string;
-  city: string;
-  terminal?: string;
-  time: string;
-}
-
-export interface FlightSegment {
-  airline: string;
-  code: string;
-  date: string;
-  weekday?: string;
-  from: FlightEndpoint;
-  to: FlightEndpoint;
-  duration?: string;
-  pnr?: string;
-  manageUrl?: string;
 }
 
 export interface ChecklistItem {

@@ -153,7 +153,9 @@ export function DayCollapseToggle() {
         if (!day) return;
         day.classList.toggle("collapsed");
         const btn = h.querySelector<HTMLElement>(".day-toggle");
-        if (btn) btn.textContent = day.classList.contains("collapsed") ? "+ 展開" : "— 收合";
+        if (btn && btn.children.length === 0) {
+          btn.textContent = day.classList.contains("collapsed") ? "+ 展開" : "— 收合";
+        }
       };
       h.addEventListener("click", handler);
       handlers.push(() => h.removeEventListener("click", handler));

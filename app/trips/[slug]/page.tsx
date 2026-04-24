@@ -61,9 +61,18 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
             extra={trip.checklist}
             storageKey={`pretrip-checklist:${trip.slug}`}
           />
-          {trip.days.map((d) => (
-            <DaySection key={d.num} day={d} />
-          ))}
+          {trip.days.map((d, i) => {
+            const isFirst = i === 0;
+            const isLast = i === trip.days.length - 1;
+            const flight = trip.flights
+              ? isFirst
+                ? { segment: trip.flights.outbound, direction: "outbound" as const }
+                : isLast
+                ? { segment: trip.flights.return, direction: "return" as const }
+                : undefined
+              : undefined;
+            return <DaySection key={d.num} day={d} flight={flight} />;
+          })}
           {trip.budget && <TripBudget budget={trip.budget} />}
           <div className="mt-20 p-10 rounded-2xl text-center text-white relative overflow-hidden shadow-[var(--shadow-lift)] bg-gradient-to-br from-[var(--ocean)] to-[var(--ocean-deep)]">
             <h3 className="font-serif font-bold text-3xl m-0 mb-2">平安的旅程 · 美好的回憶</h3>

@@ -38,7 +38,6 @@ checklist:
       - { id: beach, label: 泳衣 · 泳褲 · 浮具 · 海灘玩沙工具 }
       - { id: ic, label: "Suica / OKICA 交通卡(國內線買不到,建議抵沖後補)" }
       - { id: offline, label: 下載離線地圖:那霸 · 中部 · 北部恩納 }
-      - { id: eat-reservation, label: "琉球の牛 北谷店預約確認(5/1 晚 · 4 大人 + 2 幼兒)" }
 budget:
   title: 主要費用預估總覽
   note: "2026 年 4-5 月參考價 · 4 大人 + 2 小孩"
@@ -266,7 +265,7 @@ days:
         text: 返回美國村酒店休息
       - type: meal
         time: 晚餐
-        label: 美國村 · 燒肉和牛犒賞夜(三選一)
+        label: 美國村 · 犒賞夜 · 壽司／燒肉／牛排(三選一)
         options:
           - { name: 迴轉壽司市場 美浜店, note: "美浜 · 家庭友善迴轉壽司", url: "https://maps.google.com/?cid=15012902671948034205" }
           - { name: Yakiniku RIKIO, note: Distortion Bldg 2F · 美國村正中央 · 平價燒肉, url: "https://maps.google.com/?cid=10662811313127968860" }

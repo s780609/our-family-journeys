@@ -301,6 +301,7 @@ days:
         time: 中餐
         label: 兒童王國園內 · 邊吃邊玩
         options:
+          - { name: "⭐ 海族工房 (Kaizoku Koubou)", note: "推薦首選 · 4.6 分 · 胡屋 5-7-1 · 走出兒童王國就到 · 自助式 buffet · 11:00–17:00 (週二公休)", url: "https://www.google.com/maps/search/?api=1&query=海族工房&query_place_id=ChIJA_FyfnMS5TQRy1KXCj9q0kE" }
           - { name: 園內餐廳, note: 定食、兒童餐、輕食 }
           - { name: 園內小吃攤位, note: 冰淇淋、熱狗、飲料 }
       - type: spot

@@ -38,10 +38,10 @@ checklist:
       - { id: beach, label: 泳衣 · 泳褲 · 浮具 · 海灘玩沙工具 }
       - { id: ic, label: "Suica / OKICA 交通卡(國內線買不到,建議抵沖後補)" }
       - { id: offline, label: 下載離線地圖:那霸 · 中部 · 北部恩納 }
-      - { id: eat-reservation, label: 燒肉五苑 · 海人食堂預約確認 }
+      - { id: eat-reservation, label: "琉球の牛 北谷店預約確認(5/1 晚 · 4 大人 + 2 幼兒)" }
 budget:
   title: 主要費用預估總覽
-  note: "2026 年 4-5 月參考價 · 4 大人 + 2 嬰兒"
+  note: "2026 年 4-5 月參考價 · 4 大人 + 2 小孩"
   items:
     - label: 機票
       amount: "TWD 79,800"
@@ -149,11 +149,11 @@ days:
           - 準備換洗衣物,沙子很多
       - type: meal
         time: 晚餐
-        label: 美國村步行範圍 · 三選一
+        label: 美國村 · 漢堡輕鬆夜(三選一)
         options:
-          - { name: A&W Mihama 店, note: 沖繩美式速食經典, url: "https://www.google.com/maps/search/?api=1&query=A%26W+2+Chome-5-5+Mihama+Chatan+Okinawa" }
-          - { name: GORDIES, note: 手作漢堡名店, url: "https://www.google.com/maps/search/?api=1&query=GORDIES+American+Village+Chatan+Okinawa" }
-          - { name: Hamaya, note: 美國村家庭料理 }
+          - { name: "atabii's(原 Chatan Burger Base)", note: Depot Island Seaside 1F · 多汁手作漢堡 · 戶外看夕陽, url: "https://maps.google.com/?cid=2333300432436785773" }
+          - { name: "SUNNY'S", note: 美浜 9-1 · 漢堡熱狗 tacos · 平價戶外攤位, url: "https://maps.google.com/?cid=9431050955230509428" }
+          - { name: Jetta Burger Market, note: "Distortion Bldg 2F · 美式漢堡(替代週三公休的 Renny's)", url: "https://www.google.com/maps/search/?api=1&query=Jetta+Burger+Market&query_place_id=ChIJeSG67g8T5TQR-OzySdw53uA" }
       - type: note
         text: 第一天最重要的是「不要排太滿」— 讓長輩與小孩慢慢適應 🌙
 
@@ -209,11 +209,11 @@ days:
         text: 開車返回美國村(約 50–70 分鐘)
       - type: meal
         time: 晚餐
-        label: 美國村 · 三選一
+        label: 美國村 · 美式牛排夜(三選一)
         options:
-          - { name: A&W Mihama 店, note: 沖繩美式速食, url: "https://www.google.com/maps/search/?api=1&query=A%26W+2+Chome-5-5+Mihama+Chatan+Okinawa" }
-          - { name: GORDIES, note: 手作漢堡, url: "https://www.google.com/maps/search/?api=1&query=GORDIES+American+Village+Chatan+Okinawa" }
-          - { name: Hamaya, note: 日式家庭料理 }
+          - { name: "JUMBO STEAK HAN'S 美浜店", note: 美浜 9-1 棟 2F · 牛排+沙拉吧吃到飽 · 大份量, url: "https://maps.google.com/?cid=5770510640614107339" }
+          - { name: The Calif Kitchen, note: Depot Island Seaside 3F · 海景座位 · 烤牛肉飯與漢堡, url: "https://maps.google.com/?cid=2821164042554222603" }
+          - { name: "Tony Roma's", note: "美浜 8-7 · 美式肋排與牛排 · 17:00 才開", url: "https://maps.google.com/?cid=9341677254885713615" }
 
   - num: 3
     date: "5/1 (五)"
@@ -276,11 +276,11 @@ days:
         text: 返回美國村酒店休息
       - type: meal
         time: 晚餐
-        label: 美國村 · 三選一
+        label: 美國村 · 燒肉和牛犒賞夜(三選一)
         options:
-          - { name: A&W Mihama 店, note: 可多次光顧, url: "https://www.google.com/maps/search/?api=1&query=A%26W+2+Chome-5-5+Mihama+Chatan+Okinawa" }
-          - { name: Seaside Cafe Hanon, note: 海景景觀餐廳 }
-          - { name: GORDIES, note: 手作漢堡, url: "https://www.google.com/maps/search/?api=1&query=GORDIES+American+Village+Chatan+Okinawa" }
+          - { name: 琉球の牛 北谷店, note: "Macairi Resort 2F · 沖繩和牛 · 4.8 高分熱門 · 強烈建議提前訂位", url: "https://maps.google.com/?cid=8696307258036282159" }
+          - { name: Yakiniku RIKIO, note: Distortion Bldg 2F · 美國村正中央 · 平價燒肉, url: "https://maps.google.com/?cid=10662811313127968860" }
+          - { name: Steak House 88 北谷店, note: "at's chatan 2F · 牛排+沙拉湯飯吃到飽 · 適合家庭", url: "https://maps.google.com/?cid=12446748904123655814" }
 
   - num: 4
     date: "5/2 (六)"
@@ -326,11 +326,11 @@ days:
         desc: 若小孩還有體力,可再到 Araha Beach 看日落;若累了就回酒店休息。
       - type: meal
         time: 晚餐
-        label: 美國村 · 三選一
+        label: 美國村 · 沖繩風最後夜(三選一)
         options:
-          - { name: A&W Mihama 店, note: 最後一晚大人小孩都愛, url: "https://www.google.com/maps/search/?api=1&query=A%26W+2+Chome-5-5+Mihama+Chatan+Okinawa" }
-          - { name: GORDIES, note: 手作漢堡, url: "https://www.google.com/maps/search/?api=1&query=GORDIES+American+Village+Chatan+Okinawa" }
-          - { name: Hamaya, note: 日式家庭料理 }
+          - { name: オーシャンBoo! 北谷店, note: "Macairi Resort 1F · 阿古豬涮涮鍋 · 海景視野(湯底要請店家確認海鮮)", url: "https://maps.google.com/?cid=7580109387559142611" }
+          - { name: 美咲食堂, note: Depot Island A 2F · 沖繩家庭料理定食 · 有兒童椅, url: "https://maps.google.com/?cid=12528368423393191323" }
+          - { name: Four Seasons 牛排屋 美浜店, note: "美浜 2-5-2 · 鐵板牛排現場表演(週四公休 · 週六營業)", url: "https://maps.google.com/?cid=13043443127273491759" }
 
   - num: 5
     date: "5/3 (日)"
@@ -361,8 +361,8 @@ days:
         time: 12:00 – 13:00
         label: 午餐 · 美國村
         options:
-          - { name: A&W, note: 最後一餐沖繩美式, url: "https://www.google.com/maps/search/?api=1&query=A%26W+2+Chome-5-5+Mihama+Chatan+Okinawa" }
-          - { name: GORDIES, note: 手作漢堡, url: "https://www.google.com/maps/search/?api=1&query=GORDIES+American+Village+Chatan+Okinawa" }
+          - { name: A&W, note: 美浜 2-5-5 · 最後一餐沖繩美式速食, url: "https://www.google.com/maps/search/?api=1&query=A%26W+2+Chome-5-5+Mihama+Chatan+Okinawa" }
+          - { name: The Calif Kitchen, note: Depot Island Seaside 3F · 海景座位 · 全天候營業, url: "https://maps.google.com/?cid=2821164042554222603" }
       - type: move
         time: "13:30"
         text: 開車前往那霸機場(約 40 分鐘)

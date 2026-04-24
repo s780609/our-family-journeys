@@ -66,7 +66,11 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
           ))}
           {trip.budget && <TripBudget budget={trip.budget} />}
           <div className="mt-20 p-10 rounded-2xl text-center text-white relative overflow-hidden shadow-[var(--shadow-lift)] bg-gradient-to-br from-[var(--ocean)] to-[var(--ocean-deep)]">
-            <h3 className="font-serif font-bold text-3xl m-0 mb-2">聽說北投阿公阿嬤要出一半旅費 謝謝北投阿公阿嬤!!!</h3>
+            <h3 className="font-serif font-bold text-3xl m-0 mb-2">
+              北投阿公阿嬤說要出一半旅費
+              <br />
+              謝謝北投阿公阿嬤!!!
+            </h3>
             <p className="font-[family-name:var(--font-hand)] text-[22px] m-0 opacity-95">
               Our Family Journeys · No. 01 · {trip.locationEn || trip.location} {trip.year}
             </p>

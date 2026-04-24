@@ -166,22 +166,6 @@ days:
       - type: move
         time: 09:00 – 09:30
         text: 從美國村酒店出發 → 沖繩世界(約 50–70 分鐘)
-      - type: detour
-        title: 途中推薦停靠點(買簡餐)
-        hint: 三個推薦點,由近到遠
-        items:
-          - name: PLOUGHMAN'S LUNCH BAKERY
-            meta: 推薦停靠 1 · 最早、最方便
-            addr: 沖縄県中頭郡北中城村字安谷屋 927-2
-            note: 三明治、熱狗、沙拉可外帶,停車方便。從酒店開車約 25–35 分鐘
-            url: "https://www.google.com/maps/search/?api=1&query=Ploughman%27s+Lunch+Bakery+927-2+Adaniya+Kitanakagusuku+Okinawa"
-          - name: 沿路 Lawson / FamilyMart / San-A
-            meta: 推薦停靠 2 · 中段便利選擇
-            note: 熱食、麵包、飲料都有,適合快速補給
-          - name: 南城市 / 玉城附近便利商店
-            meta: 推薦停靠 3 · 接近目的地
-            note: 園區內也有簡食區
-        tip: 玉泉洞內禁止飲食,建議入口前或王國村用餐。帶水與小零食給小孩。
       - type: spot
         time: 10:30 – 15:00
         badge: 主要景點
@@ -204,6 +188,12 @@ days:
           - 園區可免費借輪椅,部分無障礙設施
           - 建議穿舒適鞋、帶薄外套(洞內涼)
           - 可提前於 Klook 買 WEB 前賣票,稍便宜
+      - type: meal
+        time: 中餐
+        label: 沖繩世界園內 · 邊吃邊玩
+        options:
+          - { name: 園內餐廳, note: 沖繩料理定食、沖繩そば }
+          - { name: 園內輕食攤位, note: 冰淇淋、小吃補給 }
       - type: move
         time: 15:30 – 17:00
         text: 開車返回美國村(約 50–70 分鐘)

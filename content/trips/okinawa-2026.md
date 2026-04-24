@@ -299,11 +299,10 @@ days:
           - 園內有餐飲,也可自備野餐
       - type: meal
         time: 中餐
-        label: 園區附近 · 三選一
+        label: 兒童王國園內 · 邊吃邊玩
         options:
-          - { name: Restaurant Peace, note: 日式定食 + 兒童餐 }
-          - { name: Charlie's Tacos, note: 沖繩 Taco Rice 老店 }
-          - { name: Bikkuri Donkey, note: 漢堡排連鎖 }
+          - { name: 園內餐廳, note: 定食、兒童餐、輕食 }
+          - { name: 園內小吃攤位, note: 冰淇淋、熱狗、飲料 }
       - type: spot
         time: 下午
         badge: 放鬆

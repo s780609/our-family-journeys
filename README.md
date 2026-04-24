@@ -19,7 +19,7 @@ npm run dev
 **必要欄位**:`slug`、`title`、`year`、`startDate`、`endDate`、`dateRangeLabel`、`location`、`days`
 
 **可選欄位**:
-- `mode`:`planning`(規劃中)或 `record`(紀錄)。省略時會依 `endDate` 自動判斷,今天之後是規劃中,之前是紀錄
+- `mode`:`planning`(規劃中)、`ongoing`(進行中)或 `record`(紀錄)。省略時會依 `startDate`/`endDate` 自動判斷:未到出發日是規劃中、日期區間內是進行中、結束後是紀錄
 - `coverPhoto`:封面照片路徑(`/images/...`),用於 Open Graph 圖片與首頁卡片
 - `coverVariant`:沒放真實照片時用的色塊配色(`ocean` / `coral` / `leaf` / `sun` / `sand` / `sky` / `night` / `earth`)
 

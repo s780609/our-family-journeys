@@ -68,10 +68,12 @@ export function YearList({
                             className={`shrink-0 font-[family-name:var(--font-hand)] text-[11px] px-1.5 py-px rounded-full group-hover:bg-white/20 group-hover:text-white ${
                               mode === "planning"
                                 ? "bg-[var(--sun)]/40 text-[var(--ink)]"
+                                : mode === "ongoing"
+                                ? "bg-[var(--ocean)]/25 text-[var(--ocean)]"
                                 : "bg-[var(--leaf)]/25 text-[var(--leaf)]"
                             }`}
                           >
-                            {mode === "planning" ? "規劃中" : "紀錄"}
+                            {mode === "planning" ? "規劃中" : mode === "ongoing" ? "進行中" : "紀錄"}
                           </span>
                         </div>
                         <div className="text-xs text-[var(--ink-faint)] group-hover:text-white/80 mt-0.5">

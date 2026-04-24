@@ -77,7 +77,7 @@ export interface Day {
   stops: Stop[];
 }
 
-export type TripMode = "planning" | "record";
+export type TripMode = "planning" | "ongoing" | "record";
 
 export interface TripFrontmatter {
   slug: string;
@@ -97,8 +97,8 @@ export interface TripFrontmatter {
   /** Optional real cover photo path (relative to /public), used for hero & OG image */
   coverPhoto?: string;
   /**
-   * "planning" = 尚未出發,規劃模式;"record" = 已完成,紀錄模式。
-   * Omit to auto-infer from endDate vs. today.
+   * "planning" = 尚未出發,規劃模式;"ongoing" = 旅程進行中;"record" = 已完成,紀錄模式。
+   * Omit to auto-infer from startDate/endDate vs. today.
    */
   mode?: TripMode;
   members?: string[];

@@ -6,7 +6,12 @@ export function TripHero({ trip }: { trip: TripFrontmatter }) {
   const nights = daysBetween(trip.startDate, trip.endDate);
   const days = nights + 1;
   const mode = resolveTripMode(trip);
-  const modeBadge = mode === "planning" ? { text: "規劃中", cls: "bg-[var(--sun)] text-[var(--ink)]" } : { text: "旅程紀錄", cls: "bg-[var(--leaf)] text-white" };
+  const modeBadge =
+    mode === "planning"
+      ? { text: "規劃中", cls: "bg-[var(--sun)] text-[var(--ink)]" }
+      : mode === "ongoing"
+      ? { text: "進行中", cls: "bg-[var(--ocean)] text-white" }
+      : { text: "旅程紀錄", cls: "bg-[var(--leaf)] text-white" };
 
   return (
     <header className="relative max-w-[1400px] mx-auto z-[2]">

@@ -354,7 +354,7 @@ days:
           - { name: The Calif Kitchen, note: Depot Island Seaside 3F · 海景座位 · 全天候營業, url: "https://maps.google.com/?cid=2821164042554222603" }
       - type: move
         time: "13:30"
-        text: 開車前往那霸機場(約 40 分鐘)
+        text: 開車前往那霸機場(約 50 分鐘)
       - type: spot
         time: "14:30"
         badge: 還車

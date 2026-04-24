@@ -5,6 +5,7 @@ out
 .vercel
 *.log
 .DS_Store
+tsconfig.tsbuildinfo
 
 # Claude Code：只保留共享設定，忽略憑證/session/cache 等本機執行時檔案
 .claude/*

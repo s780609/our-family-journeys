@@ -48,7 +48,7 @@ export function DayWeather({ date, lat, lng }: Props) {
           `&timezone=Asia%2FTokyo` +
           `&start_date=${date}&end_date=${date}`;
 
-        const res = await fetch(url, { next: { revalidate: 3600 } } as RequestInit);
+        const res = await fetch(url);
         if (!res.ok) throw new Error("fetch failed");
         const json = await res.json();
 

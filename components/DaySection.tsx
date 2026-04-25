@@ -1,8 +1,17 @@
 import type { Day } from "@/lib/types";
 import { StopBlock } from "./StopBlock";
 import { DayShareButton } from "./DayShareButton";
+import { DayWeather } from "./DayWeather";
 
-export function DaySection({ day }: { day: Day }) {
+interface DaySectionProps {
+  day: Day;
+  isoDate?: string; // "2026-04-29"
+  lat?: number;
+  lng?: number;
+}
+
+export function DaySection({ day, isoDate, lat, lng }: DaySectionProps) {
+  const showWeather = !!(isoDate && lat != null && lng != null);
   return (
     <section
       id={`day-${day.num}`}
@@ -25,6 +34,11 @@ export function DaySection({ day }: { day: Day }) {
           {day.sub && (
             <div className="font-[family-name:var(--font-hand)] text-base text-[var(--ink-soft)] leading-tight truncate">
               {day.sub}
+            </div>
+          )}
+          {showWeather && (
+            <div className="mt-1">
+              <DayWeather date={isoDate!} lat={lat!} lng={lng!} />
             </div>
           )}
         </div>
@@ -58,6 +72,11 @@ export function DaySection({ day }: { day: Day }) {
           {day.sub && (
             <div className="font-[family-name:var(--font-hand)] text-[22px] text-[var(--ink-soft)] mt-0.5">
               {day.sub}
+            </div>
+          )}
+          {showWeather && (
+            <div className="mt-2">
+              <DayWeather date={isoDate!} lat={lat!} lng={lng!} />
             </div>
           )}
         </div>

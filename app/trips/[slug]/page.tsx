@@ -10,6 +10,13 @@ import { MobileNav } from "@/components/MobileNav";
 import { Checklist } from "@/components/Checklist";
 import { TripBudget } from "@/components/TripBudget";
 
+/** Return startDate + offsetDays as an ISO "YYYY-MM-DD" string */
+function addDays(startDate: string, offset: number): string {
+  const d = new Date(startDate);
+  d.setDate(d.getDate() + offset);
+  return d.toISOString().slice(0, 10);
+}
+
 export async function generateStaticParams() {
   const slugs = await getAllTripSlugs();
   return slugs.map((slug) => ({ slug }));
@@ -62,7 +69,13 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
             storageKey={`pretrip-checklist:${trip.slug}`}
           />
           {trip.days.map((d) => (
-            <DaySection key={d.num} day={d} />
+            <DaySection
+              key={d.num}
+              day={d}
+              isoDate={addDays(trip.startDate, d.num - 1)}
+              lat={trip.lat}
+              lng={trip.lng}
+            />
           ))}
           {trip.budget && <TripBudget budget={trip.budget} />}
           <div className="mt-20 p-10 rounded-2xl text-center text-white relative overflow-hidden shadow-[var(--shadow-lift)] bg-gradient-to-br from-[var(--ocean)] to-[var(--ocean-deep)]">

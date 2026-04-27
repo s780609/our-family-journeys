@@ -38,6 +38,7 @@ checklist:
       - { id: beach, label: 泳衣 · 泳褲 · 浮具 · 海灘玩沙工具 }
       - { id: ic, label: "Suica / OKICA 交通卡(國內線買不到,建議抵沖後補)" }
       - { id: offline, label: 下載離線地圖:那霸 · 中部 · 北部恩納 }
+      - { id: peach-carry-on, label: "手提行李每人合計 ≤ 7kg(含隨身物品共 2 件)· Peach 嚴格秤重" }
 budget:
   title: 主要費用預估總覽
   note: "2026 年 4-5 月參考價 · 4 大人 + 2 小孩"

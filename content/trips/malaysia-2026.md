@@ -56,6 +56,9 @@ budget:
       amount: 自理
     - label: 有故事的咖啡館白咖啡 · 城市規劃展覽館 DIY 日記本
       amount: 自費
+thanks:
+  - 五股阿公出全部的旅費
+  - 謝謝五股阿公!!!
 days:
   - num: 1
     date: "10/27 (二)"

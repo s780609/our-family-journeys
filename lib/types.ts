@@ -107,6 +107,8 @@ export interface TripFrontmatter {
   flights?: { outbound: string; return: string };
   checklist?: ChecklistCategory[];
   budget?: Budget;
+  /** 頁尾感謝語,每個元素一行 */
+  thanks?: string[];
   days: Day[];
 }
 

@@ -23,6 +23,7 @@ export interface PhotoRef {
   label: string;
   variant: PhotoVariant;
   src?: string; // future: real image path
+  credit?: string; // 照片作者 · 授權,顯示於照片右下角
 }
 
 export interface MealOption {

@@ -225,6 +225,11 @@ function Photo({ s, mobile = false }: { s: any; mobile?: boolean }) {
           className="object-cover"
           {...(isRemote ? { unoptimized: true } : {})}
         />
+        {s.photo?.credit && (
+          <span className="absolute bottom-0 right-0 max-w-full truncate px-1.5 py-0.5 text-[10px] leading-tight text-white/90 bg-black/40 rounded-tl">
+            {s.photo.credit}
+          </span>
+        )}
       </div>
     );
   }

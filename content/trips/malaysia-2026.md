@@ -87,6 +87,7 @@ days:
         photo:
           label: 雞場街 · 古董街
           variant: coral
+          src: /images/trips/malaysia-2026/雞場街.jpg
         desc: 又稱古董街,沿街是中國風格的老樓房民宅。可以挖寶李小龍紀念品、南洋老電影海報,以及英治、日治時期的舊鈔與各國古錢幣。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Jonker+Walk+Melaka", text: Google Maps }
@@ -138,6 +139,7 @@ days:
         photo:
           label: 荷蘭紅屋 · 大鐘樓
           variant: coral
+          src: /images/trips/malaysia-2026/荷蘭紅屋.jpg
         desc: "<strong>荷蘭紅屋</strong>:1641–1660 年興建的荷蘭總督官邸,東方最古老的荷蘭建築。<br><strong>大鐘樓</strong>:1890 年代建於紅屋正前方。<br><strong>古城門 · 聖地牙哥碉堡</strong>:葡萄牙人 1511 年所建,因萊佛士干預得以保存。<br><strong>葡萄牙廣場</strong> · <strong>聖芳濟教堂</strong>(1849 年哥德式教堂)。"
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Stadthuys+Melaka", text: 荷蘭紅屋 }
@@ -149,6 +151,7 @@ days:
         photo:
           label: 鄭和下南洋遺跡
           variant: earth
+          src: /images/trips/malaysia-2026/三寶廟.jpg
         desc: 鄭和下南洋留下的古蹟,見證馬六甲王朝與東西文化交流。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Sam+Po+Kong+Temple+Melaka", text: Google Maps }
@@ -159,6 +162,7 @@ days:
         photo:
           label: 馬六甲花車三輪車
           variant: sun
+          src: /images/trips/malaysia-2026/三輪車.jpg
         desc: 坐三輪車在微風中穿梭古意盎然的街道。
         chips:
           - { type: price, text: 小費每台 RM4 }
@@ -174,6 +178,7 @@ days:
         photo:
           label: 海上清真寺
           variant: ocean
+          src: /images/trips/malaysia-2026/海峽清真寺.jpg
         desc: 建在人工島上、地基打入海中的清真寺,漲潮時宛如浮在海上(不入內參觀)。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Masjid+Selat+Melaka", text: Google Maps }
@@ -185,6 +190,7 @@ days:
         photo:
           label: 峇峇娘惹 · 傳統服飾
           variant: coral
+          src: /images/trips/malaysia-2026/娘惹古屋.jpg
         desc: 換上娘惹傳統服飾,漫步百年古屋拍照、在許願池許願,並在傳統茶室享用<strong>娘惹糕點與茶飲</strong>。
         tips:
           - 峇峇娘惹是 15 世紀定居馬六甲一帶的華人與馬來人通婚後代
@@ -199,6 +205,7 @@ days:
         photo:
           label: 大紅花海上 Villa
           variant: ocean
+          src: /images/trips/malaysia-2026/大紅花渡假村.jpg
         desc: 位於馬六甲海峽南端長沙灣,空中俯瞰像一朵大紅花。入住<strong>海上泳池 Villa</strong>:約 24 坪、兩張 King size 床、獨立陽台、蒸氣室與私人泳池。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Lexis+Hibiscus+Port+Dickson", text: Google Maps }
@@ -229,6 +236,7 @@ days:
         photo:
           label: Merdeka Square
           variant: sky
+          src: /images/trips/malaysia-2026/獨立廣場.jpg
         desc: 1957 年 8 月 31 日國父東姑阿都拉曼在此宣布獨立,也是國慶閱兵場地。周邊有摩爾式建築的高等法院。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Merdeka+Square+Kuala+Lumpur", text: Google Maps }
@@ -239,6 +247,7 @@ days:
         photo:
           label: KL City Gallery
           variant: sand
+          src: /images/trips/malaysia-2026/城市規劃展覽館.jpg
         desc: 展示吉隆坡發展故事,有大馬紀錄的巨型木製城市模型。
         chips:
           - { type: price, text: DIY 木片日記本自費 }
@@ -264,6 +273,7 @@ days:
         photo:
           label: Central Market · Petaling Street
           variant: coral
+          src: /images/trips/malaysia-2026/中央藝術坊.jpg
         desc: 中央藝術坊為 1888 年啟用的裝飾藝術風建築,現為工藝品市場;茨廠街是吉隆坡唐人街,紀念品與小吃平價好逛。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Central+Market+Kuala+Lumpur", text: 中央藝術坊 }
@@ -275,6 +285,7 @@ days:
         photo:
           label: 互動式壁畫
           variant: night
+          src: /images/trips/malaysia-2026/鬼仔巷.jpg
         desc: 百年老街重整後的壁畫巷,掃 QR Code 就能聽壁畫背後的老故事。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Kwai+Chai+Hong", text: Google Maps }
@@ -302,6 +313,7 @@ days:
         photo:
           label: 亞羅街 · 南洋小吃
           variant: sun
+          src: /images/trips/malaysia-2026/亞羅街夜市.jpg
         desc: 食尚玩家推薦,傍晚整條街擺滿桌椅,華人、馬來、印度料理融合的南洋美食,中文也能溝通。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Jalan+Alor+Kuala+Lumpur", text: Google Maps }
@@ -334,6 +346,7 @@ days:
         photo:
           label: 272 階彩虹階梯
           variant: coral
+          src: /images/trips/malaysia-2026/黑風洞.jpg
         desc: 印度教聖地,登上 <strong>272 階</strong>彩虹階梯可抵達洞內神殿,另有 100 公尺高的透天洞。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Batu+Caves", text: Google Maps }
@@ -347,6 +360,7 @@ days:
         photo:
           label: 雲頂纜車 · 雨林雲海
           variant: leaf
+          src: /images/trips/malaysia-2026/雲頂纜車.jpg
         desc: 搭纜車越過原始雨林登上海拔約 1,700 公尺的雲頂。
         tips:
           - 遇天候不佳或纜車維修,改搭遊覽車上山
@@ -363,6 +377,7 @@ days:
         photo:
           label: 雲頂高原
           variant: sky
+          src: /images/trips/malaysia-2026/雲頂高原.jpg
         desc: 平均氣溫 15–25°C,有室內外遊樂園、購物城「第一城」與東南亞最大合法賭場。
         chips:
           - { type: price, text: 樂園門票自理 }
@@ -377,6 +392,7 @@ days:
         photo:
           label: 科瑪小鎮
           variant: sun
+          src: /images/trips/malaysia-2026/法國村.jpg
         desc: 復刻法國科瑪小鎮,彩色木條屋牆搭配午後雲霧,很好拍。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Colmar+Tropicale", text: Google Maps }
@@ -392,6 +408,7 @@ days:
         photo:
           label: 璀璨夜明珠
           variant: night
+          src: /images/trips/malaysia-2026/莎羅馬天橋.jpg
         desc: 全長 370 公尺,設計靈感來自檳榔葉,橋身四千顆 LED 燈變換色彩。
         chips:
           - { type: time, text: 亮燈 19:00–22:00 }
@@ -404,6 +421,7 @@ days:
         photo:
           label: Petronas Twin Towers
           variant: night
+          src: /images/trips/malaysia-2026/雙子星塔.jpg
         desc: 88 層、452 公尺的馬來西亞地標,塔樓屬國油公司無法入內,可逛下方 Suria KLCC 購物中心。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=KLCC+Park", text: Google Maps }
@@ -427,6 +445,7 @@ days:
         photo:
           label: 布城湖畔粉紅清真寺
           variant: coral
+          src: /images/trips/malaysia-2026/粉紅清真寺.jpg
         desc: 四分之三建於布城湖上的粉紅色清真寺,可容納上萬人,也是少數可進祈禱大廳參觀的清真寺。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Putra+Mosque+Putrajaya", text: Google Maps }
@@ -440,6 +459,7 @@ days:
         photo:
           label: 未來太子城 Putrajaya
           variant: leaf
+          src: /images/trips/malaysia-2026/首相府.jpg
         desc: 馬來西亞行政首都,4.2 公里林蔭大道是國慶遊行場地;千禧紀念碑為 68 公尺金屬方尖塔,刻有馬來西亞重要歷史事件。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Dataran+Putra+Putrajaya", text: 首相府廣場 }

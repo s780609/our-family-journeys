@@ -2,7 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { Fragment } from "react";
 import { notFound } from "next/navigation";
-import { getAllTripSlugs, getDefaultChecklist, getTrip } from "@/lib/trips";
+import { getAllTrips, getAllTripSlugs, getDefaultChecklist, getTrip } from "@/lib/trips";
 import { TripHero } from "@/components/TripHero";
 import { DaySection } from "@/components/DaySection";
 import { ScrollProgress, BackTop, DayCollapseToggle } from "@/components/ScrollUI";
@@ -48,6 +48,9 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
   const trip = await getTrip(slug);
   if (!trip) notFound();
   const checklistDefaults = await getDefaultChecklist();
+  // 依出發日期由早到晚編號(getAllTrips 為新到舊排序)
+  const allTrips = await getAllTrips();
+  const tripNo = String(allTrips.length - allTrips.findIndex((t) => t.slug === trip.slug)).padStart(2, "0");
 
   const railDays = trip.days.map((d) => ({ num: d.num, date: d.date, theme: d.theme }));
   const mobileDays = trip.days.map((d) => ({
@@ -60,7 +63,7 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
   return (
     <>
       <MobileNav days={mobileDays} tripTitle={trip.title} hasChecklist />
-      <TripHero trip={trip} />
+      <TripHero trip={trip} tripNo={tripNo} />
       <main className="max-w-[1400px] mx-auto px-6 md:px-[72px] pb-32 grid grid-cols-1 lg:grid-cols-[220px_1fr] gap-14 relative z-[2]">
         <ScrollProgress days={railDays} />
         <section className="min-w-0">
@@ -91,7 +94,7 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
               </h3>
             )}
             <p className="font-[family-name:var(--font-hand)] text-[22px] m-0 opacity-95">
-              Our Family Journeys · No. 01 · {trip.locationEn || trip.location} {trip.year}
+              Our Family Journeys · No. {tripNo} · {trip.locationEn || trip.location} {trip.year}
             </p>
           </div>
         </section>

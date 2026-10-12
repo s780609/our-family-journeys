@@ -2,7 +2,7 @@ import type { TripFrontmatter } from "@/lib/types";
 import { resolveTripMode } from "@/lib/trips";
 import Link from "next/link";
 
-export function TripHero({ trip }: { trip: TripFrontmatter }) {
+export function TripHero({ trip, tripNo }: { trip: TripFrontmatter; tripNo: string }) {
   const nights = daysBetween(trip.startDate, trip.endDate);
   const days = nights + 1;
   const mode = resolveTripMode(trip);
@@ -38,7 +38,7 @@ export function TripHero({ trip }: { trip: TripFrontmatter }) {
           />
 
           <div className="font-[family-name:var(--font-hand)] text-[18px] text-[var(--coral)] -rotate-1 inline-block mb-1 mt-2">
-            our family journey · no.01
+            our family journey · no.{tripNo}
           </div>
           <span
             className={`inline-block font-[family-name:var(--font-hand)] text-[13px] px-2 py-0.5 rounded-xl -rotate-2 mb-2 ml-2 ${modeBadge.cls}`}
@@ -120,7 +120,7 @@ export function TripHero({ trip }: { trip: TripFrontmatter }) {
         <div className="grid grid-cols-[1fr_auto] items-end gap-10 relative">
           <div className="relative">
             <div className="font-[family-name:var(--font-hand)] text-[28px] text-[var(--coral)] -rotate-2 inline-block mb-1">
-              our family journey · no.01
+              our family journey · no.{tripNo}
             </div>
             <span
               className={`inline-block font-[family-name:var(--font-hand)] text-[18px] px-3 py-0.5 rounded-xl -rotate-2 mb-2 ml-3 align-middle ${modeBadge.cls}`}

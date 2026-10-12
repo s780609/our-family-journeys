@@ -3,8 +3,8 @@ slug: okinawa-2026
 title: 沖繩自由行 2026
 subtitle: 家族五日手帳
 year: 2026
-startDate: 2026-04-29
-endDate: 2026-05-03
+startDate: "2026-04-29"
+endDate: "2026-05-03"
 dateRangeLabel: 4/29 – 5/3
 location: 沖繩 Okinawa
 locationEn: Okinawa, Japan

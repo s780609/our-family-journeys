@@ -122,11 +122,11 @@ export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: Day
           </div>
           <div className="relative h-[54px] px-3">
             {/* rail background */}
-            <div className="absolute left-3 right-3 bottom-[18px] h-[3px] rounded-full bg-[var(--paper-dark)]" />
+            <div className="absolute left-6 right-6 bottom-[18px] h-[3px] rounded-full bg-[var(--paper-dark)]" />
             {/* rail filled portion */}
             <div
-              className="absolute left-3 bottom-[18px] h-[3px] rounded-full bg-gradient-to-r from-[var(--coral)] to-[var(--sun)] transition-[width] duration-200"
-              style={{ width: `calc((100% - 24px) * ${progress / 100})` }}
+              className="absolute left-6 bottom-[18px] h-[3px] rounded-full bg-gradient-to-r from-[var(--coral)] to-[var(--sun)] transition-[width] duration-200"
+              style={{ width: `calc((100% - 48px) * ${progress / 100})` }}
             />
             {/* day dots + labels */}
             {days.map((d, i) => {
@@ -140,7 +140,7 @@ export function MobileNav({ days, tripTitle, hasChecklist = false }: { days: Day
                   aria-label={`跳到 ${d.label} · ${d.date}`}
                   className="absolute top-0 h-full flex flex-col items-center pt-1"
                   style={{
-                    left: `calc(12px + (100% - 24px) * ${p / 100})`,
+                    left: `calc(24px + (100% - 48px) * ${p / 100})`,
                     width: 44,
                     transform: "translateX(-50%)",
                   }}

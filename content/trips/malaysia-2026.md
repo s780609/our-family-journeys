@@ -12,6 +12,13 @@ locationEn: Malaysia
 lat: 3.139003
 lng: 101.686855
 coverVariant: coral
+members:
+  - 五股阿公阿嬤
+  - 我們一家四口
+  - 大姑婆大丈公
+  - 乾阿公 · 乾阿嬤
+  - 美麗姑姑
+  - 惠瑩姑姑
 hotel:
   name: 馬六甲 → 大紅花海上 Villa → 吉隆坡五星
   area: 1 晚馬六甲 · 1 晚波德申 · 2 晚吉隆坡

@@ -20,7 +20,7 @@ members:
   - 美麗姑姑
   - 惠瑩姑姑
 hotel:
-  name: 馬六甲 → 大紅花海上 Villa → 吉隆坡五星
+  name: THE PINE MELAKA → 大紅花海上 Villa → PULLMAN KLCC
   area: 1 晚馬六甲 · 1 晚波德申 · 2 晚吉隆坡
   nights: 4
 transport:
@@ -112,14 +112,13 @@ days:
         time: 晚上
         badge: 住宿
         badgeType: main
-        title: THE PINE MELAKA 或 GRAND SWISS BELHOTEL MKZ
+        title: THE PINE MELAKA
         photo:
           label: 馬六甲 · 飯店
           variant: night
-        desc: 馬六甲住宿一晚(或同級飯店)。
+        desc: 馬六甲住宿一晚。
         links:
-          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=The+Pine+Melaka", text: The Pine Melaka }
-          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Grand+Swiss-Belhotel+Melaka", text: Grand Swiss-Belhotel }
+          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=The+Pine+Melaka", text: Google Maps }
 
   - num: 2
     date: "10/28 (三)"
@@ -333,11 +332,13 @@ days:
         time: 晚上
         badge: 住宿
         badgeType: main
-        title: 吉隆坡五星 PULLMAN KLCC 或 SOFITEL 或 LE MÉRIDIEN PJ
+        title: 吉隆坡五星 PULLMAN KLCC
         photo:
           label: 吉隆坡 · 五星飯店
           variant: night
-        desc: 吉隆坡五星飯店連住 2 晚(或同級)。
+        desc: 吉隆坡五星飯店連住 2 晚(10/29、10/30)。
+        links:
+          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Pullman+Kuala+Lumpur+City+Centre", text: Google Maps }
 
   - num: 4
     date: "10/30 (五)"
@@ -443,6 +444,17 @@ days:
         desc: 88 層、452 公尺的馬來西亞地標,塔樓屬國油公司無法入內,可逛下方 Suria KLCC 購物中心。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=KLCC+Park", text: Google Maps }
+      - type: spot
+        time: 晚上
+        badge: 住宿
+        badgeType: main
+        title: 吉隆坡五星 PULLMAN KLCC
+        photo:
+          label: 吉隆坡 · 五星飯店
+          variant: night
+        desc: 續住 PULLMAN KLCC 第 2 晚。
+        links:
+          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Pullman+Kuala+Lumpur+City+Centre", text: Google Maps }
 
   - num: 5
     date: "10/31 (六)"

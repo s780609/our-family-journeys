@@ -12,7 +12,6 @@
 | 娘惹古屋.jpg | [Baba Nyonya Heritage Museum - Reception Hall.jpg](https://commons.wikimedia.org/wiki/File:Baba_Nyonya_Heritage_Museum_-_Reception_Hall.jpg) | P. Hughes | CC BY 4.0 |
 | 大紅花渡假村.jpg | [Lexis Hibiscus Port Dickson.jpg](https://commons.wikimedia.org/wiki/File:Lexis_Hibiscus_Port_Dickson.jpg) | Anthony Ivanoff | CC0 |
 | 獨立廣場.jpg | [Sultan Abdul Samad Building and Merdeka Square, Kuala Lumpur.jpg](https://commons.wikimedia.org/wiki/File:Sultan_Abdul_Samad_Building_and_Merdeka_Square,_Kuala_Lumpur.jpg) | Khairil Yusof | CC BY 2.0 |
-| 城市規劃展覽館.jpg | [Galeri Kuala Lumpur (220512).jpg](https://commons.wikimedia.org/wiki/File:Galeri_Kuala_Lumpur_(220512).jpg) | *angys* | CC BY-SA 4.0 |
 | 中央藝術坊.jpg | [Central Market, Kuala Lumpur 02.JPG](https://commons.wikimedia.org/wiki/File:Central_Market,_Kuala_Lumpur_02.JPG) | Jordiferrer | CC BY-SA 3.0 |
 | 鬼仔巷.jpg | [Kwai Chai Hong 4.jpg](https://commons.wikimedia.org/wiki/File:Kwai_Chai_Hong_4.jpg) | Slleong | CC0 |
 | 亞羅街夜市.jpg | [Jalan Alor - Kuala Lumpur.jpg](https://commons.wikimedia.org/wiki/File:Jalan_Alor_-_Kuala_Lumpur.jpg) | IQRemix | CC BY-SA 2.0 |

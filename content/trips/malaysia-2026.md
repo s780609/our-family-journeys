@@ -76,7 +76,7 @@ budget:
       amount: "每台 RM4"
     - label: 雲頂室內樂園門票
       amount: 自理
-    - label: 有故事的咖啡館白咖啡 · 城市規劃展覽館 DIY 日記本
+    - label: 有故事的咖啡館白咖啡
       amount: 自費
 thanks:
   - 五股阿公出全部的旅費
@@ -272,20 +272,6 @@ days:
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Merdeka+Square+Kuala+Lumpur", text: 獨立廣場 }
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Istana+Negara+Kuala+Lumpur", text: 國家皇宮 }
-      - type: spot
-        time: 上午
-        badge: 展覽
-        title: 城市規劃展覽館 KL City Gallery
-        photo:
-          label: KL City Gallery
-          variant: sand
-          src: /images/trips/malaysia-2026/城市規劃展覽館.jpg
-          credit: "*angys* · CC BY-SA 4.0"
-        desc: 展示吉隆坡發展故事,有大馬紀錄的巨型木製城市模型。
-        chips:
-          - { type: price, text: DIY 木片日記本自費 }
-        links:
-          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=KL+City+Gallery", text: Google Maps }
       - type: spot
         time: 中午前
         badge: 購物

@@ -20,7 +20,7 @@ members:
   - 美麗姑姑
   - 惠瑩姑姑
 hotel:
-  name: THE PINE MELAKA → 大紅花海上 Villa → PULLMAN KLCC
+  name: THE PINE MELAKA → 大紅花海上 Villa → LE MÉRIDIEN PJ
   area: 1 晚馬六甲 · 1 晚波德申 · 2 晚吉隆坡
   nights: 4
 transport:
@@ -355,13 +355,13 @@ days:
         time: 晚上
         badge: 住宿
         badgeType: main
-        title: 吉隆坡五星 PULLMAN KLCC
+        title: 吉隆坡五星 LE MÉRIDIEN PETALING JAYA
         photo:
-          label: 吉隆坡 · 五星飯店
+          label: 八打靈再也 · 五星飯店
           variant: night
-        desc: 吉隆坡五星飯店連住 2 晚(10/29、10/30)。
+        desc: 連住 2 晚(10/29、10/30)。地址:1 Jalan SS7/26a Kelana Jaya, 47301 Petaling Jaya · TEL +603-7682 0000
         links:
-          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Pullman+Kuala+Lumpur+City+Centre", text: Google Maps }
+          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Le+Meridien+Petaling+Jaya", text: Google Maps }
 
   - num: 4
     date: "10/30 (五)"
@@ -471,13 +471,13 @@ days:
         time: 晚上
         badge: 住宿
         badgeType: main
-        title: 吉隆坡五星 PULLMAN KLCC
+        title: 吉隆坡五星 LE MÉRIDIEN PETALING JAYA
         photo:
-          label: 吉隆坡 · 五星飯店
+          label: 八打靈再也 · 五星飯店
           variant: night
-        desc: 續住 PULLMAN KLCC 第 2 晚。
+        desc: 續住 LE MÉRIDIEN PJ 第 2 晚。
         links:
-          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Pullman+Kuala+Lumpur+City+Centre", text: Google Maps }
+          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Le+Meridien+Petaling+Jaya", text: Google Maps }
 
   - num: 5
     date: "10/31 (六)"

@@ -460,7 +460,7 @@ days:
       - type: spot
         time: 晚上
         badge: 地標
-        title: 雙子星花園廣場 KLCC
+        title: 雙子星花園廣場 + 陽光廣場 Suria KLCC
         photo:
           label: Petronas Twin Towers
           variant: night
@@ -511,16 +511,16 @@ days:
       - type: spot
         time: 上午
         badge: 散步
-        title: 首相府廣場 · 布城湖 · 千禧紀念碑
+        title: 千禧紀念碑 · 布城湖 · 首相府廣場
         photo:
           label: 未來太子城 Putrajaya
           variant: leaf
           src: /images/trips/malaysia-2026/首相府.jpg
           credit: "CEphoto, Uwe Aranas · CC BY-SA 3.0"
-        desc: 馬來西亞行政首都,4.2 公里林蔭大道是國慶遊行場地;千禧紀念碑為 68 公尺金屬方尖塔,刻有馬來西亞重要歷史事件。
+        desc: 太子城為馬來西亞行政首都。千禧紀念碑為 68 公尺金屬方尖塔,刻有馬來西亞重要歷史事件;沿布城湖到首相府廣場,4.2 公里林蔭大道是國慶遊行場地。
         links:
-          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Dataran+Putra+Putrajaya", text: 首相府廣場 }
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Millennium+Monument+Putrajaya", text: 千禧紀念碑 }
+          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Dataran+Putra+Putrajaya", text: 首相府廣場 }
       - type: meal
         time: 午餐
         label: 中式合菜

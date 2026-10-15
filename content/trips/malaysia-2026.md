@@ -43,6 +43,7 @@ checklist:
     items:
       - { id: cash, label: "現金換匯(令吉)" }
       - { id: card, label: "信用卡 × 2 張(主 + 備)" }
+      - { id: insurance, label: "旅平險 · 海外醫療險(旅行社建議自行投保)" }
   - id: tech
     title: 連線 / 工具
     icon: 📱
@@ -284,6 +285,16 @@ days:
           - { type: price, text: DIY 木片日記本自費 }
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=KL+City+Gallery", text: Google Maps }
+      - type: spot
+        time: 上午
+        badge: 外觀
+        title: 國家皇宮 Istana Negara
+        photo:
+          label: 馬來西亞國家元首官邸
+          variant: sun
+        desc: 馬來西亞最高元首的官邸,金色圓頂相當醒目。皇宮不對外開放,可在正門外與騎馬、站崗的皇家衛兵合影。
+        links:
+          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Istana+Negara+Kuala+Lumpur", text: Google Maps }
       - type: spot
         time: 中午前
         badge: 購物

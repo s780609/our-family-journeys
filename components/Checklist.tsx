@@ -11,7 +11,13 @@ export function Checklist({
   extra?: ChecklistCategory[];
   storageKey: string;
 }) {
-  const categories = [...defaults, ...(extra ?? [])];
+  // 行程分類 id 與預設相同時,原位取代預設分類;其餘接在後面
+  const extraById = new Map((extra ?? []).map((c) => [c.id, c]));
+  const defaultIds = new Set(defaults.map((c) => c.id));
+  const categories = [
+    ...defaults.map((c) => extraById.get(c.id) ?? c),
+    ...(extra ?? []).filter((c) => !defaultIds.has(c.id)),
+  ];
   const allIds = categories.flatMap((c) => c.items.map((i) => `${c.id}:${i.id}`));
   const totalCount = allIds.length;
 

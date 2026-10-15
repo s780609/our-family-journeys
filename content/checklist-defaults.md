@@ -47,9 +47,9 @@ categories:
     items:
       - { id: clothes, label: "衣物 × 天數" }
       - { id: rain, label: "雨衣 / 折傘" }
-      - { id: camera, label: "相機 / 記憶卡" }
       - { id: hat, label: "防曬帽 · 太陽眼鏡" }
 ---
 
 這份是**所有行程共用**的行前清單預設分類。
 若某個行程要增加獨有項目,請在該行程的 MD `checklist:` 欄位追加(會接在預設後面)。
+若行程的分類 `id` 與預設相同(例如 `docs`),會原位取代整個預設分類。

@@ -30,6 +30,35 @@ flights:
   outbound: BR227 · 桃園 09:30 → 吉隆坡 14:15
   return: BR228 · 吉隆坡 15:30 → 桃園 20:25
 checklist:
+  # 以下分類 id 與 checklist-defaults.md 相同,會取代預設分類(跟團行程不需駕照 / 租車 / 保險 / 離線地圖)
+  - id: docs
+    title: 文件證件
+    icon: 📄
+    items:
+      - { id: passport, label: "護照(效期 6 個月以上)" }
+      - { id: visa, label: "簽證 / 免簽確認" }
+  - id: money
+    title: 金融
+    icon: 💴
+    items:
+      - { id: cash, label: "現金換匯(令吉)" }
+      - { id: card, label: "信用卡 × 2 張(主 + 備)" }
+  - id: tech
+    title: 連線 / 工具
+    icon: 📱
+    items:
+      - { id: sim, label: "SIM 卡 / eSIM / 網路分享器" }
+      - { id: charger, label: "充電器 + 行動電源 + 轉接頭" }
+      - { id: powerbank, label: "行動電源上機檢查" }
+  - id: health
+    title: 藥品 / 健康
+    icon: 💊
+    items:
+      - { id: med-cold, label: "感冒藥 · 退燒藥 · 止痛藥" }
+      - { id: med-stomach, label: "腸胃藥 · OK 繃 · 蚊蟲液" }
+      - { id: med-elder, label: "長輩慢性處方藥(備份)" }
+      - { id: sunscreen, label: "防曬 · 小孩專用" }
+      - { id: coat, label: "外套" }
   - id: malaysia
     title: 馬來西亞專屬
     icon: 🌺

@@ -41,6 +41,7 @@ checklist:
       - { id: modest, label: "黑風洞 / 清真寺:過膝褲裙 + 有袖上衣" }
       - { id: ringgit, label: 馬幣現金(三輪車小費 · 夜市 · 自費項目) }
       - { id: bug, label: 防蚊液 · 防曬 · 雨具 }
+      - { id: milk, label: "小孩牛奶:便利商店買得到,挑 Full Cream / Plain 原味", note: "UHT 保久乳免冷藏好攜帶 · susu segar = 鮮奶(需冷藏)· tanpa gula = 無糖" }
 budget:
   title: 團費與自費項目
   note: "三信旅行社報價 · 115/10/27 出發"
@@ -119,6 +120,8 @@ days:
         desc: 馬六甲住宿一晚。
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=The+Pine+Melaka", text: Google Maps }
+        tips:
+          - 先在便利商店買 4–6 盒 UHT 保久乳,大紅花渡假村附近不好買
 
   - num: 2
     date: "10/28 (三)"

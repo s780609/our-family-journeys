@@ -43,7 +43,6 @@ checklist:
     items:
       - { id: cash, label: "現金換匯(令吉)" }
       - { id: card, label: "信用卡 × 2 張(主 + 備)" }
-      - { id: insurance, label: "旅平險 · 海外醫療險(旅行社建議自行投保)" }
   - id: tech
     title: 連線 / 工具
     icon: 📱

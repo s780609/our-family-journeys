@@ -262,15 +262,16 @@ days:
       - type: spot
         time: 上午
         badge: 地標
-        title: 獨立廣場 · 高等法院
+        title: 吉隆坡市區觀光:獨立廣場 · 高等法院 · 國家皇宮
         photo:
           label: Merdeka Square
           variant: sky
           src: /images/trips/malaysia-2026/獨立廣場.jpg
           credit: "Khairil Yusof · CC BY 2.0"
-        desc: 1957 年 8 月 31 日國父東姑阿都拉曼在此宣布獨立,也是國慶閱兵場地。周邊有摩爾式建築的高等法院。
+        desc: "<strong>獨立廣場</strong>:1957 年 8 月 31 日國父東姑阿都拉曼在此宣布獨立,也是國慶閱兵場地。<br><strong>高等法院</strong>:廣場周邊的摩爾式建築。<br><strong>國家皇宮</strong>:最高元首官邸,金色圓頂相當醒目,不對外開放,可在正門外與皇家衛兵合影。"
         links:
-          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Merdeka+Square+Kuala+Lumpur", text: Google Maps }
+          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Merdeka+Square+Kuala+Lumpur", text: 獨立廣場 }
+          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Istana+Negara+Kuala+Lumpur", text: 國家皇宮 }
       - type: spot
         time: 上午
         badge: 展覽
@@ -285,16 +286,6 @@ days:
           - { type: price, text: DIY 木片日記本自費 }
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=KL+City+Gallery", text: Google Maps }
-      - type: spot
-        time: 上午
-        badge: 外觀
-        title: 國家皇宮 Istana Negara
-        photo:
-          label: 馬來西亞國家元首官邸
-          variant: sun
-        desc: 馬來西亞最高元首的官邸,金色圓頂相當醒目。皇宮不對外開放,可在正門外與騎馬、站崗的皇家衛兵合影。
-        links:
-          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Istana+Negara+Kuala+Lumpur", text: Google Maps }
       - type: spot
         time: 中午前
         badge: 購物

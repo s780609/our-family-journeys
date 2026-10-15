@@ -50,15 +50,6 @@ checklist:
       - { id: sim, label: "SIM 卡 / eSIM / 網路分享器" }
       - { id: charger, label: "充電器 + 行動電源 + 轉接頭" }
       - { id: powerbank, label: "行動電源上機檢查" }
-  - id: health
-    title: 藥品 / 健康
-    icon: 💊
-    items:
-      - { id: med-cold, label: "感冒藥 · 退燒藥 · 止痛藥" }
-      - { id: med-stomach, label: "腸胃藥 · OK 繃 · 蚊蟲液" }
-      - { id: med-elder, label: "長輩慢性處方藥(備份)" }
-      - { id: sunscreen, label: "防曬 · 小孩專用" }
-      - { id: coat, label: "外套" }
   - id: malaysia
     title: 馬來西亞專屬
     icon: 🌺

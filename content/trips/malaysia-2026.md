@@ -20,7 +20,7 @@ members:
   - 美麗姑姑
   - 惠瑩姑姑
 hotel:
-  name: THE PINE MELAKA → 大紅花海上 Villa → LE MÉRIDIEN PJ
+  name: THE PINES MELAKA → 大紅花海上 Villa → LE MÉRIDIEN PJ
   area: 1 晚馬六甲 · 1 晚波德申 · 2 晚吉隆坡
   nights: 4
 transport:
@@ -134,13 +134,13 @@ days:
         time: 晚上
         badge: 住宿
         badgeType: main
-        title: THE PINE MELAKA
+        title: THE PINES MELAKA
         photo:
           label: 馬六甲 · 飯店
           variant: night
-        desc: 馬六甲住宿一晚。
+        desc: 馬六甲住宿一晚。地址:33, Jalan Tun Sri Lanang, 75100 Melaka · TEL +606-240 2323
         links:
-          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=The+Pine+Melaka", text: Google Maps }
+          - { type: map, url: "https://www.google.com/maps/search/?api=1&query=The+Pines+Melaka", text: Google Maps }
         tips:
           - 先在便利商店買 4–6 盒 UHT 保久乳,大紅花渡假村附近不好買
 
@@ -236,7 +236,7 @@ days:
           variant: ocean
           src: /images/trips/malaysia-2026/大紅花渡假村.jpg
           credit: "Anthony Ivanoff · CC0"
-        desc: 位於馬六甲海峽南端長沙灣,空中俯瞰像一朵大紅花。入住<strong>海上泳池 Villa</strong>:約 24 坪、兩張 King size 床、獨立陽台、蒸氣室與私人泳池。
+        desc: 位於馬六甲海峽南端長沙灣,空中俯瞰像一朵大紅花。入住<strong>海上泳池 Villa</strong>:約 24 坪、兩張 King size 床、獨立陽台、蒸氣室與私人泳池。地址:12th Mile, Jalan Pantai, 71250 Port Dickson, Negeri Sembilan · TEL +60 6-660 2626
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Lexis+Hibiscus+Port+Dickson", text: Google Maps }
       - type: meal

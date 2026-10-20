@@ -163,6 +163,16 @@ export function HomeMap({ trips }: { trips: Trip[] }) {
           });
         });
 
+        // 預設視野縮放到剛好包含所有旅程圖釘
+        if (mappable.length > 1) {
+          const bounds = new g.maps.LatLngBounds();
+          mappable.forEach((t) => bounds.extend({ lat: t.lat!, lng: t.lng! }));
+          map.fitBounds(bounds, 48);
+        } else if (mappable.length === 1) {
+          map.setCenter({ lat: mappable[0].lat!, lng: mappable[0].lng! });
+          map.setZoom(6);
+        }
+
         setStatus("ready");
       })
       .catch((err) => {

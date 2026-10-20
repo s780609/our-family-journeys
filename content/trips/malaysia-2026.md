@@ -62,6 +62,7 @@ checklist:
       - { id: modest, label: "黑風洞 / 清真寺:過膝褲裙 + 有袖上衣" }
       - { id: ringgit, label: 馬幣現金(三輪車小費 · 夜市 · 自費項目) }
       - { id: bug, label: 防蚊液 · 防曬 · 雨具 }
+      - { id: swim-ring, label: "玩水泳圈(大紅花 Villa 私人泳池 · 飯店兒童池)" }
       - { id: milk, label: "小孩牛奶:便利商店買得到,挑 Full Cream / Plain 原味", note: "UHT 保久乳免冷藏好攜帶 · susu segar = 鮮奶(需冷藏)· tanpa gula = 無糖" }
 budget:
   title: 團費與自費項目
@@ -143,7 +144,7 @@ days:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=The+Pines+Melaka", text: Google Maps }
         tips:
           - 先在便利商店買 4–6 盒 UHT 保久乳,大紅花渡假村附近不好買
-          - 飯店有戶外遊樂場與兒童池,可利用隔天早上出發前的空檔帶小孩玩(開放時間請向領隊或飯店確認)
+          - 飯店有戶外遊樂場與兒童池,可利用隔天早上出發前的空檔帶小孩玩(泳池 07:00–19:00,以飯店公告為準)
 
   - num: 2
     date: "10/28 (三)"
@@ -240,6 +241,9 @@ days:
         desc: 位於馬六甲海峽南端長沙灣,空中俯瞰像一朵大紅花。入住<strong>海上泳池 Villa</strong>:約 24 坪、兩張 King size 床、獨立陽台、蒸氣室與私人泳池。地址:12th Mile, Jalan Pantai, 71250 Port Dickson, Negeri Sembilan · TEL +60 6-660 2626
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Lexis+Hibiscus+Port+Dickson", text: Google Maps }
+        tips:
+          - "Kidz World 兒童俱樂部每人 RM20(記入房帳),週日–四 08:00–19:00 · 週五六 / 假日 08:00–21:00;週三入住多半已關門,可利用隔天早上 8 點後的空檔"
+          - "戶外泳池 07:00–21:00(1 樓 Roselle Coffee House 旁)"
       - type: meal
         time: 晚餐
         label: 渡假村自助餐
@@ -351,6 +355,8 @@ days:
         desc: 連住 2 晚(10/29、10/30)。地址:1 Jalan SS7/26a Kelana Jaya, 47301 Petaling Jaya · TEL +603-7682 0000
         links:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=Le+Meridien+Petaling+Jaya", text: Google Maps }
+        tips:
+          - "30 樓無邊際泳池(1.2m)+ 兒童池(0.6m),每日 06:00–21:00"
 
   - num: 4
     date: "10/30 (五)"

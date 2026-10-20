@@ -57,7 +57,7 @@ checklist:
     items:
       - { id: passport, label: 護照效期 6 個月以上 }
       - { id: mdac, label: "入境前 3 天內線上填寫 MDAC 馬來西亞數位入境卡", url: "https://imigresen-online.imi.gov.my/mdac/main" }
-      - { id: plug, label: 英式三孔插頭轉接頭(Type G · 230V) }
+      - { id: plug, label: "英式三孔插頭轉接頭(Type G · 230V)· 每間房 1–2 個", note: "飯店萬國插座 / 櫃台借用不保證,選有多個 USB 孔的款式 · 電器需標示 100–240V,溫奶器 / 消毒鍋多為 110V 不能用 · 台灣延長線多為 125V 勿使用" }
       - { id: jacket, label: "薄外套(雲頂高原 15–25°C)" }
       - { id: modest, label: "黑風洞 / 清真寺:過膝褲裙 + 有袖上衣" }
       - { id: ringgit, label: 馬幣現金(三輪車小費 · 夜市 · 自費項目) }

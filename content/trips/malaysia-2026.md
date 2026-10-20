@@ -143,6 +143,7 @@ days:
           - { type: map, url: "https://www.google.com/maps/search/?api=1&query=The+Pines+Melaka", text: Google Maps }
         tips:
           - 先在便利商店買 4–6 盒 UHT 保久乳,大紅花渡假村附近不好買
+          - 飯店有戶外遊樂場與兒童池,可利用隔天早上出發前的空檔帶小孩玩(開放時間請向領隊或飯店確認)
 
   - num: 2
     date: "10/28 (三)"

@@ -45,7 +45,7 @@ export function DayWeather({ date, lat, lng }: Props) {
           `https://api.open-meteo.com/v1/forecast` +
           `?latitude=${lat}&longitude=${lng}` +
           `&daily=weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max` +
-          `&timezone=Asia%2FTokyo` +
+          `&timezone=auto` +
           `&start_date=${date}&end_date=${date}`;
 
         const res = await fetch(url);

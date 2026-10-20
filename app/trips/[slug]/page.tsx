@@ -77,8 +77,8 @@ export default async function TripPage({ params }: { params: Promise<{ slug: str
               key={d.num}
               day={d}
               isoDate={addDays(trip.startDate, d.num - 1)}
-              lat={trip.lat}
-              lng={trip.lng}
+              lat={d.lat ?? trip.lat}
+              lng={d.lng ?? trip.lng}
             />
           ))}
           {trip.budget && <TripBudget budget={trip.budget} />}

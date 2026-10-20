@@ -75,6 +75,8 @@ export interface Day {
   dateFull: string;
   theme: string;
   sub?: string;
+  lat?: number; // 天氣預報座標,未設定時沿用行程的 lat
+  lng?: number;
   stops: Stop[];
 }
 

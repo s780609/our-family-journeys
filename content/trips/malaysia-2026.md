@@ -62,7 +62,7 @@ checklist:
       - { id: modest, label: "黑風洞 / 清真寺:過膝褲裙 + 有袖上衣" }
       - { id: ringgit, label: 馬幣現金(三輪車小費 · 夜市 · 自費項目) }
       - { id: bug, label: 防蚊液 · 防曬 · 雨具 }
-      - { id: swim-ring, label: "玩水泳圈(大紅花 Villa 私人泳池 · 飯店兒童池)" }
+      - { id: swim-ring, label: "泳衣 · 玩水泳圈(大紅花 Villa 私人泳池 · 飯店兒童池)" }
       - { id: milk, label: "小孩牛奶:便利商店買得到,挑 Full Cream / Plain 原味", note: "UHT 保久乳免冷藏好攜帶 · susu segar = 鮮奶(需冷藏)· tanpa gula = 無糖" }
 budget:
   title: 團費與自費項目
